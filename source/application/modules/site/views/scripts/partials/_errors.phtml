@@ -1,0 +1,18 @@
+<?php if( empty( $this->errors ) == false && is_array( $this->errors ) ) { ?>
+    <div class="alert alert-danger alert-dismissible" role="alert" style="margin: 0px 0px 15px 0px;">
+        <button type="button" class="close" data-dismiss="alert">
+            <span aria-hidden="true">&times;</span><span class="sr-only"><?php echo $this->translate( "close" ); ?></span>
+        </button>
+        <?php foreach( $this->errors as $error ) { ?>
+            <?php
+            if( is_array( $error ) == true ) {
+                foreach( $error as $e ) {
+                    echo $e . '<br />';
+                }
+            } else {
+                echo $error . '<br />';
+            }
+            ?>
+        <?php } ?>
+    </div>
+<?php } ?>

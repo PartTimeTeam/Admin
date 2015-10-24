@@ -1,0 +1,1591 @@
+<?xml version='1.0' ?><!DOCTYPE tmx SYSTEM 'tmx14.dtd'>
+<tmx version='1.4'>
+	<header creationtool='CTmx' creationtoolversion='1.0' datatype='winres' segtype='sentence' adminlang='en-us' srclang='en-us' o-tmf='txt'>
+	</header>
+	<body>
+		<tu tuid='account-list'>
+			<tuv xml:lang='en'>
+				<seg>Account List</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Account List</seg>
+			</tuv>
+		</tu>
+		<tu tuid='phone'>
+			<tuv xml:lang='en'>
+				<seg>Phone Number</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Phone Number</seg>
+			</tuv>
+		</tu>
+		<tu tuid='missing-delta'>
+			<tuv xml:lang='en'>
+				<seg>Missing Delta</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Missing Delta</seg>
+			</tuv>
+		</tu>
+		<tu tuid='exchange-rate-list'>
+			<tuv xml:lang='en'>
+				<seg>Exchange Rate List</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Exchange Rate List</seg>
+			</tuv>
+		</tu>
+		<tu tuid='exchange-rate-id'>
+			<tuv xml:lang='en'>
+				<seg>Id</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Id</seg>
+			</tuv>
+		</tu>
+		<tu tuid='to-currency'>
+			<tuv xml:lang='en'>
+				<seg>To Currency</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>To Currency</seg>
+			</tuv>
+		</tu>
+		<tu tuid='from-currency'>
+			<tuv xml:lang='en'>
+				<seg>From Currency</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>From Currency</seg>
+			</tuv>
+		</tu>
+		<tu tuid='rate'>
+			<tuv xml:lang='en'>
+				<seg>Rate</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Rate</seg>
+			</tuv>
+		</tu>
+		<tu tuid='delta'>
+			<tuv xml:lang='en'>
+				<seg>Delta</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Delta</seg>
+			</tuv>
+		</tu>
+		<tu tuid='create-date'>
+			<tuv xml:lang='en'>
+				<seg>Created Date</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Created Date</seg>
+			</tuv>
+		</tu>
+		<tu tuid='update-date'>
+			<tuv xml:lang='en'>
+				<seg>Updated Date</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Updated Date</seg>
+			</tuv>
+		</tu>
+		<tu tuid='exchange-rate-detail-edit-fail'>
+			<tuv xml:lang='en'>
+				<seg>Edit Exchange Rate Failed</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Edit Exchange Rate Failed</seg>
+			</tuv>
+		</tu>
+		<tu tuid='country-currency-map'>
+			<tuv xml:lang='en'>
+				<seg>COUNTRY &lt;br /&gt; CURRENCY MAP</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>COUNTRY &lt;br /&gt; CURRENCY MAP</seg>
+			</tuv>
+		</tu>
+		<tu tuid='create-country-currency-map'>
+			<tuv xml:lang='en'>
+				<seg>CREATE COUNTRY CURRENCY MAP</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>CREATE COUNTRY CURRENCY MAP</seg>
+			</tuv>
+		</tu>
+		<tu tuid='country'>
+			<tuv xml:lang='en'>
+				<seg>Country</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Country</seg>
+			</tuv>
+		</tu>
+		<tu tuid='currency'>
+			<tuv xml:lang='en'>
+				<seg>Currency</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Currency</seg>
+			</tuv>
+		</tu>
+		<tu tuid='country-currency-list'>
+			<tuv xml:lang='en'>
+				<seg>Country Currency List</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Country Currency List</seg>
+			</tuv>
+		</tu>
+		<tu tuid='country-currency'>
+			<tuv xml:lang='en'>
+				<seg>Country Currency Map</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Country Currency Map</seg>
+			</tuv>
+		</tu>
+		<tu tuid='update-country-currency-map-fail'>
+			<tuv xml:lang='en'>
+				<seg>Update Country Currency Map Fail</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Update Country Currency Map Fail</seg>
+			</tuv>
+		</tu>
+		<tu tuid='add-country-currency-map-fail'>
+			<tuv xml:lang='en'>
+				<seg>Add Country Currency Map Fail</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Add Country Currency Map Fail</seg>
+			</tuv>
+		</tu>
+		<tu tuid='action-star-id'>
+			<tuv xml:lang='en'>
+				<seg>Id</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Id</seg>
+			</tuv>
+		</tu>
+		<tu tuid='action'>
+			<tuv xml:lang='en'>
+				<seg>Action</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Action</seg>
+			</tuv>
+		</tu>
+		<tu tuid='star'>
+			<tuv xml:lang='en'>
+				<seg>Star</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Star</seg>
+			</tuv>
+		</tu>
+		<tu tuid='num'>
+			<tuv xml:lang='en'>
+				<seg>Num</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Num</seg>
+			</tuv>
+		</tu>
+		<tu tuid='created-by'>
+			<tuv xml:lang='en'>
+				<seg>Created By</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Created By</seg>
+			</tuv>
+		</tu>
+		<tu tuid='updated-by'>
+			<tuv xml:lang='en'>
+				<seg>Updated By</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Updated By</seg>
+			</tuv>
+		</tu>
+		<tu tuid='invalid-delta'>
+			<tuv xml:lang='en'>
+				<seg>Invalid Delta</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Invalid Delta</seg>
+			</tuv>
+		</tu>
+		<tu tuid='action-star-list'>
+			<tuv xml:lang='en'>
+				<seg>Action Star List</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Action Star List</seg>
+			</tuv>
+		</tu>
+		<tu tuid='create-new-action-star'>
+			<tuv xml:lang='en'>
+				<seg>CREATE ACTION STAR</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>CREATE ACTION STAR</seg>
+			</tuv>
+		</tu>
+		<tu tuid='sync-all'>
+			<tuv xml:lang='en'>
+				<seg>SYNC ALL</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>SYNC ALL</seg>
+			</tuv>
+		</tu>
+		<tu tuid='missing-action-star'>
+			<tuv xml:lang='en'>
+				<seg>Missing Action Star</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Missing Action Star</seg>
+			</tuv>
+		</tu>
+		<tu tuid='add-action-star-fail'>
+			<tuv xml:lang='en'>
+				<seg>Add action star fail</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Add action star fail</seg>
+			</tuv>
+		</tu>
+		<tu tuid='update-action-star-fail'>
+			<tuv xml:lang='en'>
+				<seg>Update action star fail</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Update action star fail</seg>
+			</tuv>
+		</tu>
+		<tu tuid='add-status-level-fail'>
+			<tuv xml:lang='en'>
+				<seg>Add status level fail</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Add status level fail</seg>
+			</tuv>
+		</tu>
+		<tu tuid='update-status-level-fail'>
+			<tuv xml:lang='en'>
+				<seg>Update status level fail</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Update status level fail</seg>
+			</tuv>
+		</tu>
+		<tu tuid='status'>
+			<tuv xml:lang='en'>
+				<seg>Status</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Status</seg>
+			</tuv>
+		</tu>
+		<tu tuid='reward'>
+			<tuv xml:lang='en'>
+				<seg>Reward</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Reward</seg>
+			</tuv>
+		</tu>
+		<tu tuid='create-new-status-level'>
+			<tuv xml:lang='en'>
+				<seg>CREATE STATUS LEVEL</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>CREATE STATUS LEVEL</seg>
+			</tuv>
+		</tu>
+		<tu tuid='missing-star'>
+			<tuv xml:lang='en'>
+				<seg>Missing Star</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Missing Star</seg>
+			</tuv>
+		</tu>
+		<tu tuid='missing-reward'>
+			<tuv xml:lang='en'>
+				<seg>Missing Reward</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Missing Reward</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Sku'>
+			<tuv xml:lang='en'>
+				<seg>Sku</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Sku</seg>
+			</tuv>
+		</tu>
+		<tu tuid='City'>
+			<tuv xml:lang='en'>
+				<seg>City</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>City</seg>
+			</tuv>
+		</tu>
+		<tu tuid='RedeemDate'>
+			<tuv xml:lang='en'>
+				<seg>Redeem Date</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Redeem Date</seg>
+			</tuv>
+		</tu>
+		<tu tuid='FirstName'>
+			<tuv xml:lang='en'>
+				<seg>First Name</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>First Name</seg>
+			</tuv>
+		</tu>
+		<tu tuid='LastName'>
+			<tuv xml:lang='en'>
+				<seg>Last Name</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Last Name</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Zipcode'>
+			<tuv xml:lang='en'>
+				<seg>Zip Code</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Zip Code</seg>
+			</tuv>
+		</tu>
+		<tu tuid='FirstPurchaseDate'>
+			<tuv xml:lang='en'>
+				<seg>First Purchase Date</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>First Purchase Date</seg>
+			</tuv>
+		</tu>
+		<tu tuid='LastUseDate'>
+			<tuv xml:lang='en'>
+				<seg>Last Use Date</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Last Use Date</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Email'>
+			<tuv xml:lang='en'>
+				<seg>Email</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Email</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Balance'>
+			<tuv xml:lang='en'>
+				<seg>Balance</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Balance</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Phone'>
+			<tuv xml:lang='en'>
+				<seg>Phone</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Phone</seg>
+			</tuv>
+		</tu>
+		<tu tuid='ReferralName'>
+			<tuv xml:lang='en'>
+				<seg>Referral Name</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Referral Name</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Created'>
+			<tuv xml:lang='en'>
+				<seg>Created</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Created</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Notes'>
+			<tuv xml:lang='en'>
+				<seg>Notes</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Notes</seg>
+			</tuv>
+		</tu>
+		<tu tuid='StatementOption'>
+			<tuv xml:lang='en'>
+				<seg>Statement Option</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Statement Option</seg>
+			</tuv>
+		</tu>
+		<tu tuid='FirstUseDate'>
+			<tuv xml:lang='en'>
+				<seg>First Use Date</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>First Use Date</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Pin'>
+			<tuv xml:lang='en'>
+				<seg>Pin</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Pin</seg>
+			</tuv>
+		</tu>
+		<tu tuid='MinBalance'>
+			<tuv xml:lang='en'>
+				<seg>Min Balance</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Min Balance</seg>
+			</tuv>
+		</tu>
+		<tu tuid='RefillAmt'>
+			<tuv xml:lang='en'>
+				<seg>Refill Amt</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Refill Amt</seg>
+			</tuv>
+		</tu>
+		<tu tuid='ReferralPhone'>
+			<tuv xml:lang='en'>
+				<seg>Referral Phone</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Referral Phone</seg>
+			</tuv>
+		</tu>
+		<tu tuid='State'>
+			<tuv xml:lang='en'>
+				<seg>State</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>State</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Currency'>
+			<tuv xml:lang='en'>
+				<seg>Currency</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Currency</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Street'>
+			<tuv xml:lang='en'>
+				<seg>Street</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Street</seg>
+			</tuv>
+		</tu>
+		<tu tuid='LastPurchaseDate'>
+			<tuv xml:lang='en'>
+				<seg>Last Purchase Date</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Last Purchase Date</seg>
+			</tuv>
+		</tu>
+		<tu tuid='CreatedBy'>
+			<tuv xml:lang='en'>
+				<seg>Created By</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Created By</seg>
+			</tuv>
+		</tu>
+		<tu tuid='AutoRefillUpdatedBy'>
+			<tuv xml:lang='en'>
+				<seg>Auto Refill Updated By</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Auto Refill Updated By</seg>
+			</tuv>
+		</tu>
+		<tu tuid='access-phone'>
+			<tuv xml:lang='en'>
+				<seg>Access Phone</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Access Phone</seg>
+			</tuv>
+		</tu>
+		<tu tuid='ani'>
+			<tuv xml:lang='en'>
+				<seg>Ani</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Ani</seg>
+			</tuv>
+		</tu>
+		<tu tuid='called-time'>
+			<tuv xml:lang='en'>
+				<seg>Called Time</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Called Time</seg>
+			</tuv>
+		</tu>
+		<tu tuid='charge'>
+			<tuv xml:lang='en'>
+				<seg>Charge</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Charge</seg>
+			</tuv>
+		</tu>
+		<tu tuid='destination'>
+			<tuv xml:lang='en'>
+				<seg>Destination</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Destination</seg>
+			</tuv>
+		</tu>
+		<tu tuid='duration'>
+			<tuv xml:lang='en'>
+				<seg>Duration</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Duration</seg>
+			</tuv>
+		</tu>
+		<tu tuid='round-duration'>
+			<tuv xml:lang='en'>
+				<seg>Round Duration</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Round Duration</seg>
+			</tuv>
+		</tu>
+		<tu tuid='type'>
+			<tuv xml:lang='en'>
+				<seg>Type</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Type</seg>
+			</tuv>
+		</tu>
+		<tu tuid='carrier'>
+			<tuv xml:lang='en'>
+				<seg>Carrier</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Carrier</seg>
+			</tuv>
+		</tu>
+		<tu tuid='cdr-premiumCall'>
+			<tuv xml:lang='en'>
+				<seg>Cdr Premium Call</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Cdr Premium Call</seg>
+			</tuv>
+		</tu>
+		<tu tuid='account-premium-call'>
+			<tuv xml:lang='en'>
+				<seg>Account Premium Call</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Account Premium Call</seg>
+			</tuv>
+		</tu>
+		<tu tuid='status-level-list'>
+			<tuv xml:lang='en'>
+				<seg>Status Level List</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Status Level List</seg>
+			</tuv>
+		</tu>
+		<tu tuid='invalid-num'>
+			<tuv xml:lang='en'>
+				<seg>Invalid Num</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Invalid Num</seg>
+			</tuv>
+		</tu>
+		<tu tuid='invalid-star'>
+			<tuv xml:lang='en'>
+				<seg>Invalid Star</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Invalid Star</seg>
+			</tuv>
+		</tu>
+		<tu tuid='invalid-reward'>
+			<tuv xml:lang='en'>
+				<seg>Invalid Reward</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Invalid Reward</seg>
+			</tuv>
+		</tu>
+		<tu tuid='create-new-venue-payment-fee'>
+			<tuv xml:lang='en'>
+				<seg>CREATE PAYMENT TYPE FEE</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>CREATE PAYMENT TYPE FEE</seg>
+			</tuv>
+		</tu>
+		<tu tuid='venue'>
+			<tuv xml:lang='en'>
+				<seg>Venue</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Venue</seg>
+			</tuv>
+		</tu>
+		<tu tuid='fee-percent'>
+			<tuv xml:lang='en'>
+				<seg>Fee Percent</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Fee Percent</seg>
+			</tuv>
+		</tu>
+		<tu tuid='venue-payment-fee'>
+			<tuv xml:lang='en'>
+				<seg>PAYMENT TYPE&lt;br/&gt;FEE</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>PAYMENT TYPE&lt;br/&gt;FEE</seg>
+			</tuv>
+		</tu>
+		<tu tuid='venue-payment-fee-list'>
+			<tuv xml:lang='en'>
+				<seg>Payment Type Fee List</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Payment Type Fee List</seg>
+			</tuv>
+		</tu>
+		<tu tuid='prefer-margin-list'>
+			<tuv xml:lang='en'>
+				<seg>Prefer Margin List</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Prefer Margin List</seg>
+			</tuv>
+		</tu>
+		<tu tuid='object-type'>
+			<tuv xml:lang='en'>
+				<seg>Object Type</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Object Type</seg>
+			</tuv>
+		</tu>
+		<tu tuid='object-id'>
+			<tuv xml:lang='en'>
+				<seg>Object Id</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Object Id</seg>
+			</tuv>
+		</tu>
+		<tu tuid='object-name'>
+			<tuv xml:lang='en'>
+				<seg>Object Name</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Object Name</seg>
+			</tuv>
+		</tu>
+		<tu tuid='create-new-prefer-margin'>
+			<tuv xml:lang='en'>
+				<seg>CREATE PREFER MARGIN</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>CREATE PREFER MARGIN</seg>
+			</tuv>
+		</tu>
+		<tu tuid='venue-country-list'>
+			<tuv xml:lang='en'>
+				<seg>Venue Country List</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Venue Country List</seg>
+			</tuv>
+		</tu>
+		<tu tuid='create-new-venue-country'>
+			<tuv xml:lang='en'>
+				<seg>CREATE VENUE COUNTRY</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>CREATE VENUE COUNTRY</seg>
+			</tuv>
+		</tu>
+		<tu tuid='add-venue-country-fail'>
+			<tuv xml:lang='en'>
+				<seg>Add Venue Country Fail</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Add Venue Country Fail</seg>
+			</tuv>
+		</tu>
+		<tu tuid='update-venue-country-fail'>
+			<tuv xml:lang='en'>
+				<seg>Update Venue Country Fail</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Update Venue Country Fail</seg>
+			</tuv>
+		</tu>
+		<tu tuid='add-venue-payment-fee-fail'>
+			<tuv xml:lang='en'>
+				<seg>Add Payment Type Fee Fail</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Add Payment Type Fee Fail</seg>
+			</tuv>
+		</tu>
+		<tu tuid='update-venue-payment-fee-fail'>
+			<tuv xml:lang='en'>
+				<seg>Update Payment Type Fee Fail</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Update Payment Type Fee Fail</seg>
+			</tuv>
+		</tu>
+		<tu tuid='add-venue-currency-fail'>
+			<tuv xml:lang='en'>
+				<seg>Add Payment Type Currency Fail</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Add Payment Type Currency Fail</seg>
+			</tuv>
+		</tu>
+		<tu tuid='update-venue-currency-fail'>
+			<tuv xml:lang='en'>
+				<seg>Update Payment Type Currency Fail</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Update Payment Type Currency Fail</seg>
+			</tuv>
+		</tu>
+		<tu tuid='venue-currency-list'>
+			<tuv xml:lang='en'>
+				<seg>Payment Type Currency List</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Payment Type Currency List</seg>
+			</tuv>
+		</tu>
+		<tu tuid='create-new-venue-currency'>
+			<tuv xml:lang='en'>
+				<seg>CREATE PAYMENT TYPE CURRENCY</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>CREATE PAYMENT TYPE CURRENCY</seg>
+			</tuv>
+		</tu>
+		<tu tuid='invalid-value'>
+			<tuv xml:lang='en'>
+				<seg>Invalid value.</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Invalid value.</seg>
+			</tuv>
+		</tu>
+		<tu tuid='update-prefer-margin-fail'>
+			<tuv xml:lang='en'>
+				<seg>Fail to update prefer margin.</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Fail to update prefer margin.</seg>
+			</tuv>
+		</tu>
+		<tu tuid='add-prefer-margin-fail'>
+			<tuv xml:lang='en'>
+				<seg>Fail to add prefer margin.</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Fail to add prefer margin.</seg>
+			</tuv>
+		</tu>
+		<tu tuid='prefer-margin-header'>
+			<tuv xml:lang='en'>
+				<seg>Prefer Margin</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Prefer Margin</seg>
+			</tuv>
+		</tu>
+		<tu tuid='country-currency-for-payment'>
+			<tuv xml:lang='en'>
+				<seg>COUNTRY CURRENCY &lt;br/&gt; FOR PAYMENT</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>COUNTRY CURRENCY &lt;br/&gt; FOR PAYMENT</seg>
+			</tuv>
+		</tu>
+		<tu tuid='create-new-country-currency-for-payment'>
+			<tuv xml:lang='en'>
+				<seg>CREATE COUNTRY CURRENCY FOR PAYMENT</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>CREATE COUNTRY CURRENCY FOR PAYMENT</seg>
+			</tuv>
+		</tu>
+		<tu tuid='country-currency-for-payment-list'>
+			<tuv xml:lang='en'>
+				<seg>Country Currency For Payment List</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Country Currency For Payment List</seg>
+			</tuv>
+		</tu>
+		<tu tuid='add-country-currency-for-payment-fail'>
+			<tuv xml:lang='en'>
+				<seg>Add Country Currency For Payment Fail</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Add Country Currency For Payment Fail</seg>
+			</tuv>
+		</tu>
+		<tu tuid='update-country-currency-for-payment-fail'>
+			<tuv xml:lang='en'>
+				<seg>Update Country Currency For Payment Fail</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Update Country Currency For Payment Fail</seg>
+			</tuv>
+		</tu>
+		<tu tuid='product-payment-type-header'>
+			<tuv xml:lang='en'>
+				<seg>PRODUCT&lt;br/&gt;PAYMENT TYPE</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>PRODUCT&lt;br/&gt;PAYMENT TYPE</seg>
+			</tuv>
+		</tu>
+		<tu tuid='product-payment-type-list'>
+			<tuv xml:lang='en'>
+				<seg>Product Payment Type List</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Product Payment Type List</seg>
+			</tuv>
+		</tu>
+		<tu tuid='create-new-product-payment-type'>
+			<tuv xml:lang='en'>
+				<seg>CREATE PRODUCT PAYMENT TYPE</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>CREATE PRODUCT PAYMENT TYPE</seg>
+			</tuv>
+		</tu>
+		<tu tuid='product-payment-type'>
+			<tuv xml:lang='en'>
+				<seg>Product Payment Type</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Product Payment Type</seg>
+			</tuv>
+		</tu>
+		<tu tuid='update-product-payment-type-fail'>
+			<tuv xml:lang='en'>
+				<seg>Cannot update product payment type. Please try again.</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Cannot update product payment type. Please try again.</seg>
+			</tuv>
+		</tu>
+		<tu tuid='add-product-payment-type-fail'>
+			<tuv xml:lang='en'>
+				<seg>Cannot add product payment type. Please try again.</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Cannot add product payment type. Please try again.</seg>
+			</tuv>
+		</tu>
+		<tu tuid='payment-fee-list'>
+			<tuv xml:lang='en'>
+				<seg>Payment Fee List</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Payment Fee List</seg>
+			</tuv>
+		</tu>
+		<tu tuid='create-new-payment-fee'>
+			<tuv xml:lang='en'>
+				<seg>CREATE PAYMENT FEE</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>CREATE PAYMENT FEE</seg>
+			</tuv>
+		</tu>
+		<tu tuid='add-payment-fee-fail'>
+			<tuv xml:lang='en'>
+				<seg>Add Payment Fee Fail</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Add Payment Fee Fail</seg>
+			</tuv>
+		</tu>
+		<tu tuid='update-payment-fee-fail'>
+			<tuv xml:lang='en'>
+				<seg>Update Payment Fee Fail</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Update Payment Fee Fail</seg>
+			</tuv>
+		</tu>
+		<tu tuid='missing-country'>
+			<tuv xml:lang='en'>
+				<seg>Missing Country</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Missing Country</seg>
+			</tuv>
+		</tu>
+		<tu tuid='missing-currency'>
+			<tuv xml:lang='en'>
+				<seg>Missing Currency</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Missing Currency</seg>
+			</tuv>
+		</tu>
+		<tu tuid='missing-venue'>
+			<tuv xml:lang='en'>
+				<seg>Missing Venue</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Missing Venue</seg>
+			</tuv>
+		</tu>
+		<tu tuid='invalid-fee-percent'>
+			<tuv xml:lang='en'>
+				<seg>Invalid Fee Percent</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Invalid Fee Percent</seg>
+			</tuv>
+		</tu>
+		<tu tuid='invalid-fee'>
+			<tuv xml:lang='en'>
+				<seg>Invalid Fee</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Invalid Fee</seg>
+			</tuv>
+		</tu>
+		<tu tuid='country-code'>
+			<tuv xml:lang='en'>
+				<seg>Country Code</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Country Code</seg>
+			</tuv>
+		</tu>
+		<tu tuid='missing-payment-type'>
+			<tuv xml:lang='en'>
+				<seg>Missing Payment Type</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Missing Payment Type</seg>
+			</tuv>
+		</tu>
+		<tu tuid='add-venue-payment-type-country-fail'>
+			<tuv xml:lang='en'>
+				<seg>Add payment type country fail</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Add payment type country fail</seg>
+			</tuv>
+		</tu>
+		<tu tuid='update-venue-payment-type-country-fail'>
+			<tuv xml:lang='en'>
+				<seg>Update payment type country fail</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Update payment type country fail</seg>
+			</tuv>
+		</tu>
+		<tu tuid='venue-payment-type-country-list'>
+			<tuv xml:lang='en'>
+				<seg>Payment Type Country List</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Payment Type Country List</seg>
+			</tuv>
+		</tu>
+		<tu tuid='create-new-venue-payment-type-country'>
+			<tuv xml:lang='en'>
+				<seg>CREATE PAYMENT TYPE COUNTRY</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>CREATE PAYMENT TYPE COUNTRY</seg>
+			</tuv>
+		</tu>
+		<tu tuid='venue-payment-type-country-header'>
+			<tuv xml:lang='en'>
+				<seg>PAYMENT TYPE&lt;br/&gt;COUNTRY</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>PAYMENT TYPE&lt;br/&gt;COUNTRY</seg>
+			</tuv>
+		</tu>
+		<tu tuid='payment-fee-header'>
+			<tuv xml:lang='en'>
+				<seg>Payment Fee</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Payment Fee</seg>
+			</tuv>
+		</tu>
+		<tu tuid='venue-country-header'>
+			<tuv xml:lang='en'>
+				<seg>Venue Country </seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Venue Country</seg>
+			</tuv>
+		</tu>
+		<tu tuid='venue-payment-fee-header'>
+			<tuv xml:lang='en'>
+				<seg>Payment Type Fee </seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Payment Type Fee</seg>
+			</tuv>
+		</tu>
+		<tu tuid='venue-payment-type-country-header-add'>
+			<tuv xml:lang='en'>
+				<seg>Payment Type Country</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Payment Type Country</seg>
+			</tuv>
+		</tu>
+		<tu tuid='country-currency-map-header'>
+			<tuv xml:lang='en'>
+				<seg>Country Currency Map</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Country Currency Map</seg>
+			</tuv>
+		</tu>
+		<tu tuid='venue-currency-header'>
+			<tuv xml:lang='en'>
+				<seg>Payment Type Currency</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Payment Type Currency</seg>
+			</tuv>
+		</tu>
+		<tu tuid='country-currency-for-payment-header'>
+			<tuv xml:lang='en'>
+				<seg>Country Currency For Payment</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Country Currency For Payment</seg>
+			</tuv>
+		</tu>
+		<tu tuid='action-star-header'>
+			<tuv xml:lang='en'>
+				<seg>Action Star</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Action Star</seg>
+			</tuv>
+		</tu>
+		<tu tuid='status-level-header'>
+			<tuv xml:lang='en'>
+				<seg>Status Level</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Status Level</seg>
+			</tuv>
+		</tu>
+		<tu tuid='product-country'>
+			<tuv xml:lang='en'>
+				<seg>PRODUCT&lt;br/&gt;COUNTRY</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>PRODUCT&lt;br/&gt;COUNTRY</seg>
+			</tuv>
+		</tu>
+		<tu tuid='order-exception'>
+			<tuv xml:lang='en'>
+				<seg>ORDER&lt;br/&gt;EXCEPTION</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>ORDER&lt;br/&gt;EXCEPTION</seg>
+			</tuv>
+		</tu>
+		<tu tuid='create-new-reward-point'>
+			<tuv xml:lang='en'>
+				<seg>CREATE REWARD POINT</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>CREATE REWARD POINT</seg>
+			</tuv>
+		</tu>
+		<tu tuid='reward-point-list'>
+			<tuv xml:lang='en'>
+				<seg>Reward Point List</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Reward Point List</seg>
+			</tuv>
+		</tu>
+		<tu tuid='level'>
+			<tuv xml:lang='en'>
+				<seg>Level</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Level</seg>
+			</tuv>
+		</tu>
+		<tu tuid='reward-point-header'>
+			<tuv xml:lang='en'>
+				<seg>Reward Point</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Reward Point</seg>
+			</tuv>
+		</tu>
+		<tu tuid='add-reward-point-fail'>
+			<tuv xml:lang='en'>
+				<seg>Add reward point fail</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Add reward point fail</seg>
+			</tuv>
+		</tu>
+		<tu tuid='update-reward-point-fail'>
+			<tuv xml:lang='en'>
+				<seg>Update reward point fail</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Update reward point fail</seg>
+			</tuv>
+		</tu>
+		<tu tuid='reward-point-path'>
+			<tuv xml:lang='en'>
+				<seg>Path</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Path</seg>
+			</tuv>
+		</tu>
+		<tu tuid='update-call-out-fail'>
+			<tuv xml:lang='en'>
+				<seg>Fail to update call-out country map.</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Fail to update call-out country map.</seg>
+			</tuv>
+		</tu>
+		<tu tuid='add-call-out-fail'>
+			<tuv xml:lang='en'>
+				<seg>Add call-out country map fail.</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Add call-out country map fail.</seg>
+			</tuv>
+		</tu>
+		<tu tuid='call-out-header'>
+			<tuv xml:lang='en'>
+				<seg>Call-Out Country Map</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Call-Out Country Map</seg>
+			</tuv>
+		</tu>
+		<tu tuid='sku'>
+			<tuv xml:lang='en'>
+				<seg>Sku</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Sku</seg>
+			</tuv>
+		</tu>
+		<tu tuid='call-out-list'>
+			<tuv xml:lang='en'>
+				<seg>Call-Out Country Map List</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Call-Out Country Map List</seg>
+			</tuv>
+		</tu>
+		<tu tuid='missing-sku'>
+			<tuv xml:lang='en'>
+				<seg>Missing Sku</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Missing Sku</seg>
+			</tuv>
+		</tu>
+		<tu tuid='create-new-call-out'>
+			<tuv xml:lang='en'>
+				<seg>CREATE CALL-OUT COUNTRY MAP</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>CREATE CALL-OUT COUNTRY MAP</seg>
+			</tuv>
+		</tu>
+		<tu tuid='config-timeout-header'>
+			<tuv xml:lang='en'>
+				<seg>Config Timeout</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Config Timeout</seg>
+			</tuv>
+		</tu>
+		<tu tuid='update-config-timeout-fail'>
+			<tuv xml:lang='en'>
+				<seg>Update config timeout fail</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Update config timeout fail</seg>
+			</tuv>
+		</tu>
+		<tu tuid='add-config-timeout-fail'>
+			<tuv xml:lang='en'>
+				<seg>Add config timeout fail</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Add config timeout fail</seg>
+			</tuv>
+		</tu>
+		<tu tuid='method'>
+			<tuv xml:lang='en'>
+				<seg>Method</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Method</seg>
+			</tuv>
+		</tu>
+		<tu tuid='url'>
+			<tuv xml:lang='en'>
+				<seg>Url</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Url</seg>
+			</tuv>
+		</tu>
+		<tu tuid='config-timeout-list'>
+			<tuv xml:lang='en'>
+				<seg>Config Timeout List</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Config Timeout List</seg>
+			</tuv>
+		</tu>
+		<tu tuid='create-config-timeout'>
+			<tuv xml:lang='en'>
+				<seg>CREATE CONFIG TIMEOUT</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>CREATE CONFIG TIMEOUT</seg>
+			</tuv>
+		</tu>
+		<tu tuid='setting-timeout'>
+			<tuv xml:lang='en'>
+				<seg>Setting</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Setting</seg>
+			</tuv>
+		</tu>
+		<tu tuid='timeout'>
+			<tuv xml:lang='en'>
+				<seg>Timeout</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Timeout</seg>
+			</tuv>
+		</tu>
+		<tu tuid='delay'>
+			<tuv xml:lang='en'>
+				<seg>Delay</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Delay</seg>
+			</tuv>
+		</tu>
+		<tu tuid='payment-method'>
+			<tuv xml:lang='en'>
+				<seg>Payment Method</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Payment Method</seg>
+			</tuv>
+		</tu>
+		<tu tuid='missing-payment-method'>
+			<tuv xml:lang='en'>
+				<seg>Missing Payment Method</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Missing Payment Method</seg>
+			</tuv>
+		</tu>
+		<tu tuid='missing-priority'>
+			<tuv xml:lang='en'>
+				<seg>Missing Priority</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Missing Priority</seg>
+			</tuv>
+		</tu>
+		<tu tuid='action-history'>
+			<tuv xml:lang='en'>
+				<seg>Action History</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Action History</seg>
+			</tuv>
+		</tu>
+		<tu tuid='point-history'>
+			<tuv xml:lang='en'>
+				<seg>Point History</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Point History</seg>
+			</tuv>
+		</tu>
+		<tu tuid='notification-history'>
+			<tuv xml:lang='en'>
+				<seg>Notification History</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Notification History</seg>
+			</tuv>
+		</tu>
+		<tu tuid='purchased-history'>
+			<tuv xml:lang='en'>
+				<seg>Purchased History</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Purchased History</seg>
+			</tuv>
+		</tu>
+		<tu tuid='payment-setting'>
+			<tuv xml:lang='en'>
+				<seg>Payment Setting</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Payment Setting</seg>
+			</tuv>
+		</tu>
+		<tu tuid='account-action-type'>
+			<tuv xml:lang='en'>
+				<seg>Account Action Type</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Account Action Type</seg>
+			</tuv>
+		</tu>
+		<tu tuid='date-from'>
+			<tuv xml:lang='en'>
+				<seg>Date From</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Date From</seg>
+			</tuv>
+		</tu>
+		<tu tuid='date-to'>
+			<tuv xml:lang='en'>
+				<seg>Date To</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Date To</seg>
+			</tuv>
+		</tu>
+		<tu tuid='time'>
+			<tuv xml:lang='en'>
+				<seg>Time</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Time</seg>
+			</tuv>
+		</tu>
+		<tu tuid='content'>
+			<tuv xml:lang='en'>
+				<seg>Content</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Content</seg>
+			</tuv>
+		</tu>
+		<tu tuid='receiver'>
+			<tuv xml:lang='en'>
+				<seg>Receiver</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Receiver</seg>
+			</tuv>
+		</tu>
+		<tu tuid='point'>
+			<tuv xml:lang='en'>
+				<seg>Point</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Point</seg>
+			</tuv>
+		</tu>
+		<tu tuid='destphone'>
+			<tuv xml:lang='en'>
+				<seg>Destphone</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Destphone</seg>
+			</tuv>
+		</tu>
+		<tu tuid='sender'>
+			<tuv xml:lang='en'>
+				<seg>Sender</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Sender</seg>
+			</tuv>
+		</tu>
+		<tu tuid='action-history-list'>
+			<tuv xml:lang='en'>
+				<seg>Action History List</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Action History List</seg>
+			</tuv>
+		</tu>
+		<tu tuid='point-history-list'>
+			<tuv xml:lang='en'>
+				<seg>Point History List</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Point History List</seg>
+			</tuv>
+		</tu>
+		<tu tuid='notification-history-list'>
+			<tuv xml:lang='en'>
+				<seg>Notification History List</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Notification History List</seg>
+			</tuv>
+		</tu>
+		<tu tuid='purchased-history-list'>
+			<tuv xml:lang='en'>
+				<seg>Purchased History List</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Purchased History List</seg>
+			</tuv>
+		</tu>
+		<tu tuid='payment-setting-list'>
+			<tuv xml:lang='en'>
+				<seg>Payment Setting List</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Payment Setting List</seg>
+			</tuv>
+		</tu>
+		<tu tuid='direction'>
+			<tuv xml:lang='en'>
+				<seg>Direction</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Direction</seg>
+			</tuv>
+		</tu>
+		<tu tuid='type-group'>
+			<tuv xml:lang='en'>
+				<seg>Type Group</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Type Group</seg>
+			</tuv>
+		</tu>
+		<tu tuid='group'>
+			<tuv xml:lang='en'>
+				<seg>Group</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Group</seg>
+			</tuv>
+		</tu>
+		<tu tuid='display-info'>
+			<tuv xml:lang='en'>
+				<seg>Display Info</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Display Info</seg>
+			</tuv>
+		</tu>
+		<tu tuid='is-default'>
+			<tuv xml:lang='en'>
+				<seg>IsDefault</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>IsDefault</seg>
+			</tuv>
+		</tu>
+		<tu tuid='product-group-name'>
+			<tuv xml:lang='en'>
+				<seg>Product Group Name</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Product Group Name</seg>
+			</tuv>
+		</tu>
+		<tu tuid='payment-amount'>
+			<tuv xml:lang='en'>
+				<seg>Payment Amount</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Payment Amount</seg>
+			</tuv>
+		</tu>
+		<tu tuid='product-type'>
+			<tuv xml:lang='en'>
+				<seg>Product Type</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Product Type</seg>
+			</tuv>
+		</tu>
+		<tu tuid='created-time'>
+			<tuv xml:lang='en'>
+				<seg>Created Time</seg>
+			</tuv>
+			<tuv xml:lang='es'>
+				<seg>Created Time</seg>
+			</tuv>
+		</tu>
+	</body>
+</tmx>

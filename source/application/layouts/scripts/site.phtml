@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <meta name="robots" content="index, follow" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="width=1024, maximum-scale=1.0, user-scalable=no">
+        <?php echo $this->headMeta(); ?>
+        <?php echo $this->headTitle(); ?>
+        <?php echo $this->headLink(); ?>
+        <script>
+        	var Language = 'en';
+        	 var autoLogoutConfig = '<?php echo $this->autoLogoutMilisec; ?>';
+        	 var showNotify = '<?php echo $this->showNotify ;?>';
+        	var dataTableLang = {
+                	"sEmptyTable":     "No data available in table",
+                	"sInfo":           "Showing _START_ to _END_ of _TOTAL_ entries",
+                	"sInfoEmpty":      "Showing 0 to 0 of 0 entries",
+                	"sInfoFiltered":   "(filtered from _MAX_ total entries)",
+                	"sInfoPostFix":    "",
+                	"sInfoThousands":  ",",
+                	"sLengthMenu":     "Show _MENU_ entries",
+                	"sLoadingRecords": "Loading...",
+                	"sProcessing":     "<span class=\"fa fa-spinner fa-spin icon-loadding\"></span> Processing...",
+                	"sSearch":         "Search:",
+                	"sZeroRecords":    "No matching records found",
+                	"oPaginate": {
+                		"sFirst":    "First",
+                		"sLast":     "Last",
+                		"sNext":     "Next",
+                		"sPrevious": "Previous"
+                	},
+                	"oAria": {
+                		"sSortAscending":  ": activate to sort column ascending",
+                		"sSortDescending": ": activate to sort column descending"
+                	}
+                };
+        </script>
+        <?php echo $this->headScript(); ?>
+        <script src="/libs/head.js" data-headjs-load="/scripts/init.js"></script>
+        
+        
+         <?php if( isset( $this->autoHeadScripts ) && empty( $this->autoHeadScripts ) == false ) { ?>
+            <script>
+            function loadCommonJSFiles() {
+                head.load(<?php echo implode( ',', $this->autoHeadScripts ) ?>);
+                PNotify.prototype.options.styling = "fontawesome";
+                console.log(<?php echo implode( ',', $this->autoHeadScripts ) ?>);
+            }
+
+            head.ready(function () {
+                siteConfig.environment = '<?php echo substr( APPLICATION_ENV, 0, 3 ) ?>';
+                siteConfig.namespace = '<?php echo 'PaymentAdmin.site.pages' ?>';
+                loadCommonJSFiles();
+            });
+            </script>
+        <?php } ?>
+    </head>
+    <body>
+    <!-- Loading -->
+        <div class="modal fade" id="dialog-loading" data-backdrop="static" style="z-index: 10000 !important;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <i class="fa fa-spinner fa-spin icon-loadding"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Loading -->
+    	<?php if($this->login_flag == 1){ ?>
+	    	<nav class="navbar navbar-default lunex-admin" role="navigation">
+	    		<!-- menu -->
+	    		<?php echo $this->render('/partial/_horizontal-menu.phtml');?>	
+			</nav>
+		<?php }?>
+    	<div class="wrapper">
+    		 <aside class="leftpanel">
+    		 </aside>
+    		 <aside class="right-side">
+    		 	<?php echo $this->layout()->content; ?>
+    		 </aside>
+    	</div>
+    </body>
+</html>

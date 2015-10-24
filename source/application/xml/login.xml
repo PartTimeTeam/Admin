@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<form name="loginForm">
+		<checkrules>
+			<username>
+				<validate>
+	                <NotEmpty message="username-missing" />
+	            </validate>
+			</username>
+			<password>
+				<validate>
+	                <NotEmpty message="missing-password" />
+	            </validate>
+			</password>
+		</checkrules>
+	</form>
+</root>
