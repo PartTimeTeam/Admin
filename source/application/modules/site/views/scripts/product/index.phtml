@@ -1,0 +1,26 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div>
+                <h3><?php echo $this->translate( "Product" ); ?></h3>
+            </div>
+            <hr/>
+        </div>
+    </div>
+    <div class="row">
+    	<div class="col-md-12 text-left position">
+			<button type="button" class="btn btn-success" onclick="window.location='/<?php echo $this->controller;?>/upload';"><i class="fa fa-crosshairs"></i> UPLOAD</button>
+	    </div>
+	    <div class="col-md-12">
+	    	<table id="productTable" class="data-table display" cellspacing="0" width="100%">
+	    		<thead>
+	    			<tr>
+	    				<th width="15px">ID</th>
+	    				<th>Name</th>
+	    				<th width="15px">Action</th>
+	    			</tr>
+	    		</thead>
+	    	</table>
+	    </div>
+    </div>
+</div>

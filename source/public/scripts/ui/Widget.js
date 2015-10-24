@@ -174,7 +174,7 @@ head.ready(function() {
 	        // Mark as setup
 	        dataTable.addClass('setup');
 	        dataTable.on('xhr.dt', function ( e, settings, json ) {
-				if (json && json.Code == GlobalNameSpace.Constant.CODE_SESSION_EXPIRED) {
+				if (json && json.Code == PaymentAdmin.site.pages.Constant.CODE_SESSION_EXPIRED) {
 					//go to login page if session expire
 					window.location.href = "/";
 					return false;
@@ -230,7 +230,7 @@ head.ready(function() {
 	    	}
 	    	$(selector).addClass('setup');
 	    	$(selector).on('xhr.dt', function ( e, settings, json ) {
-				if (json && json.Code == GlobalNameSpace.Constant.CODE_SESSION_EXPIRED) {
+				if (json && json.Code == PaymentAdmin.site.pages.Constant.CODE_SESSION_EXPIRED ) {
 					//go to login page if session expire
 					window.location.href = "/";
 					return false;

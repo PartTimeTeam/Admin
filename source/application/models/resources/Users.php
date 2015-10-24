@@ -159,10 +159,8 @@ class Users extends Zend_Db_Table_Abstract
         $datain = array(
                 'full_name'       => $data['full_name'],
                 'user_name'       => $data['user_name'],
+        		'password'		  => $data['password'],
                 'email'           => $data['email'],
-                'role_id'         => $data['role_id'],
-                'timeout'         => $data['timeout'],
-                'disable_cache'   => $data['disable_cache']
         );
         if ( empty( $data['password'] ) == false ) {
             $datain['password'] = UtilEncryption::encryptPassword( $data['password'] );
@@ -171,15 +169,13 @@ class Users extends Zend_Db_Table_Abstract
             $datain['status'] = $data['status'];
         }
         if ( empty( $data["id"] ) == false )  {
-            $datain['date_updated'] = new Zend_Db_Expr("NOW()");
-            $where[] = $this->getAdapter()->quoteInto( "id = ?", $data["id"], Zend_Db::INT_TYPE );
+            $where[] = $this->getAdapter()->quoteInto( "user_id = ?", $data["id"], Zend_Db::INT_TYPE );
             $where[] = $this->getAdapter()->quoteInto( "status <> ?", USER_STATUS_DELETED );
-            UtilLogs::logHistory( LOG_ACTION_EDIT, Constants::$controllerUtilMapping[Constants::USER_CTRL], $data["id"], '', array(), $datain );
+//             UtilLogs::logHistory( LOG_ACTION_EDIT, Constants::$controllerUtilMapping[Constants::USER_CTRL], $data["id"], '', array(), $datain );
             return $this->update( $datain, $where );
         } else {
-            $datain['date_created']  = new Zend_Db_Expr("NOW()");
             $userId = $this->insert( $datain );
-            UtilLogs::logHistory( LOG_ACTION_ADD, Constants::$controllerUtilMapping[Constants::USER_CTRL], $userId, '', array(), $datain );
+//             UtilLogs::logHistory( LOG_ACTION_ADD, Constants::$controllerUtilMapping[Constants::USER_CTRL], $userId, '', array(), $datain );
             return $userId;
         }
     }
@@ -194,9 +190,8 @@ class Users extends Zend_Db_Table_Abstract
         $datain = array(
                 'status'      => USER_STATUS_DELETED
         );
-        $datain['date_updated'] = new Zend_Db_Expr("NOW()");
-        $where = $this->getAdapter()->quoteInto('id = ?', $userId);
-        UtilLogs::logHistory( LOG_ACTION_DELETE, Constants::$controllerUtilMapping[Constants::USER_CTRL], $userId, '', array(), $datain );
+        $where = $this->getAdapter()->quoteInto('user_id = ?', $userId);
+//         UtilLogs::logHistory( LOG_ACTION_DELETE, Constants::$controllerUtilMapping[Constants::USER_CTRL], $userId, '', array(), $datain );
         return $this->update( $datain, $where );
     }
     public function updateUserByEmail( $data, $userId = null ) {
@@ -221,4 +216,5 @@ class Users extends Zend_Db_Table_Abstract
     	$result = $result->toArray();
     	return $result;
     }
+
 }

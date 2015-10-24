@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<form name="loginForm">
+		<checkrules>
+			<full_name> 
+		        <validate>
+		            <NotEmpty message="missing-name" />
+		            <StringLength min="0" max="100" encoding="UTF-8" message="invalid-name" />
+		        </validate>
+		    </full_name>
+			<email>
+				<validate>
+	                <NotEmpty message="missing-email" />
+	                <EmailAddress message="invalid-email-address" />
+	            </validate>
+			</email>
+			<user_name>
+				<validate>
+	                <NotEmpty message="username-missing" />
+	                <StringLength min="0" max="255" encoding="UTF-8" message="invalid-username" />
+	            </validate>
+			</user_name>
+			<password>
+				<validate>
+	                <NotEmpty message="missing-password" />
+	            </validate>
+			</password>
+		</checkrules>
+	</form>
+</root>

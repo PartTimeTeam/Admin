@@ -23,24 +23,24 @@ function loadJSClass( clss, url, callBack ) {
         callBack();
     }
 }
-// Get translation
-function translate(text, group) {
-	if ( Lunex.isDefined(group) ) {
-		if ( group[text] ) {
-                    return group[text];
-                }else if( GlobalNameSpace.Translation.Translations[text] ){
-                    return GlobalNameSpace.Translation.Translations[text];
-                } else {
-                    return "Error! This text '" + group + "." + text + "' have not translated.";
-                }
-	} else {
-		if ( GlobalNameSpace.Translation.Translations[text] ) {
-	        return GlobalNameSpace.Translation.Translations[text];
-	    } else {
-	        return "Error! This text '" + text + "' have not translated.";
-	    }
-	}
-}
+//// Get translation
+//function translate(text, group) {
+//	if ( XRace.isDefined(group) ) {
+//		if ( group[text] ) {
+//                    return group[text];
+//                }else if( GlobalNameSpace.Translation.Translations[text] ){
+//                    return GlobalNameSpace.Translation.Translations[text];
+//                } else {
+//                    return "Error! This text '" + group + "." + text + "' have not translated.";
+//                }
+//	} else {
+//		if ( GlobalNameSpace.Translation.Translations[text] ) {
+//	        return GlobalNameSpace.Translation.Translations[text];
+//	    } else {
+//	        return "Error! This text '" + text + "' have not translated.";
+//	    }
+//	}
+//}
 // Check if array is empty
 function isArrayEmpty( obj ){
 	var count = 0;

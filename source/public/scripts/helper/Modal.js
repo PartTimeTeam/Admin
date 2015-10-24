@@ -23,7 +23,7 @@ Singleton('XRace.helper.Modal', {
     		message: message,
     		buttons: {
     			main: {
-    				label: translate('ok'),
+    				label: 'Ok',
     				className: "btn-primary",
     				callback: function() {
     					if (callback && typeof(callback) === 'function') {			
@@ -41,13 +41,13 @@ Singleton('XRace.helper.Modal', {
     		message: message,
     		buttons: {
     			danger: {
-    				label: translate('cancel'),
+    				label: 'Cancel',
     				className: "",
     				callback: function() {
     				}
     			},
     			main: {
-    				label: translate('ok'),
+    				label: 'Ok',
     				className: "btn-primary",
     				callback: function() {
     					if (callback && typeof(callback) === 'function') {			

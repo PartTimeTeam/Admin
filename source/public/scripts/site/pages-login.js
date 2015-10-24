@@ -2,7 +2,7 @@ head.ready(function () {
 	Namespace(siteConfig.namespace);
 
 	Singleton(siteConfig.namespace + '.Login', {
-	    group: {},
+	    product: {},
 	    __init__: function() {
 	        var me = this;
 	        $("#changeCaptcha").click(function(){

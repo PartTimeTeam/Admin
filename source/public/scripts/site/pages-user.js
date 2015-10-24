@@ -1,11 +1,9 @@
 head.ready(function () {
 	Namespace(siteConfig.namespace);
-
 	Singleton(siteConfig.namespace + '.User', {
-	    group: {},
+	    user: {},
 	    __init__: function() {
 	        var me = this;
-	        console.log(siteConfig.namespace);
 	        var aoColumns = [
 	    	                 {"data": "user_id"},
 	    	                 { "data": "user_name" },
@@ -54,17 +52,48 @@ head.ready(function () {
 	  							orderable: false,
 	  							"data": "full_name"
 	  					   },
-	  						{
+	  					 {
 	  							"render": function ( data, type, row ) {
-	  								return "";
+	  								return '<button type="button" onclick="PaymentAdmin.site.pages.User.deleteUser('+row['user_id']+')" class="btn btn-danger" rel="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash-o"></i></button>';
 	  							},
 	  							"targets": 5,
-	  							orderable: false,
+	  							"orderable": false,
 	  							"data": "Action_Table"
 	  					   }
 	  	    ];
 	        XRace.ui.Widget.setupDataTable( "#userTable", "/user/list", aoColumns, columnDefs, {order:[[ 1, "desc" ]]});
 	    },
+	    /*
+         * delete user
+         */
+        deleteUser: function( id ) {
+        	console.log(id);
+            var me = this;
+            XRace.helper.Modal.confirm( "Are you sure want to delete this user", function(result){
+                if (result) {
+                    var options = {
+                            success: function (data) {
+                                if (data.Code > 0) {
+                                	XRace.helper.Modal.alert("Delete user successfully", function() {
+                                            var t = $("#userTable").DataTable();
+                                            t.draw();
+                                    });
+                                } else {
+                                	XRace.helper.Modal.alert("Delete user fail");
+                                }
+                            },
+                            error: function(data){
+                            	XRace.helper.Modal.alert("Delete user fail");
+                            }   
+                    };
+                    var url = '/user/delete';
+                    var data = {
+                            id : id
+                    };
+                    XRace.Ajax.post(url, data, options);
+                }
+			});
+		}
 	});
 });
 

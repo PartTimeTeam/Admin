@@ -57,6 +57,42 @@ class Site_UserController extends FrontBaseAction {
     	exit;
     }
     /**
+     * Create/ Update User
+     */
+    public function detailAction(){
+    	$mdlUser = new Users();
+    	$userInfo = array();
+    	$error = array();
+    	$userId = 0;
+    	// get post card information if there is postcard'id available
+    	if( empty( $this->post_data ['id'] ) == false ) {
+    		$userId = $this->post_data ['id'];
+    		$userInfo = $mdlUser->fetchUserById( $userId );
+    		if( empty( $userInfo ) == true ) {
+    			$this->_redirect( '/'.$this->controller );
+    		}
+    	}
+    	// check request is POST or GET
+    	if( $this->request->isPost() ) {
+    		$xml = APPLICATION_PATH.'/xml/user.xml';
+    		$error = BaseService::checkInputData( $xml, $this->post_data);
+    		$rs = $mdlUser->fetchUserByEmail( $this->post_data['email']);
+    		if ( empty( $rs ) == false ){
+    			$error[] = 'Exist email';
+    		}
+    		
+    		if( empty( $error ) == true ) {
+    			$result = $mdlUser->saveUser( $this->post_data );
+    		}else {
+    			$userInfo = $this->post_data;
+    			$error = $error;
+    		}
+    	}
+    	$this->view->info = $userInfo;
+    	$this->view->id = $userId;
+    	$this->view->error = $error;
+    }
+    /**
      * Change password
      */
     public function changePasswordAction(){
@@ -92,5 +128,21 @@ class Site_UserController extends FrontBaseAction {
     	$this->view->postData = $postData;
     	$this->view->error = $error;
     }
-    
+    /**
+     * Delete
+     */
+    public function deleteAction() {
+    	//check ajax request
+    	$this->isAjax();
+    	//get request parameter
+    	$id = intval( $this->post_data["id"] );
+    	//check parameter
+    	if ( $id > 0 ) {
+    		$product = new Users();
+    		$product->deleteUser( $id );
+    		$this->ajaxResponse( CODE_SUCCESS );
+    	} else {
+    		$this->ajaxResponse( CODE_HAS_ERROR );
+    	}
+    }
 }
