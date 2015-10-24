@@ -11,6 +11,13 @@
 				<seg>Ngôn Ngữ</seg>
 			</tuv>
 		</tu>
-		
+		<tu tuid='admin-xrace'>
+			<tuv xml:lang='en'>
+				<seg>Admin Xrace</seg>
+			</tuv>
+			<tuv xml:lang='vi'>
+				<seg>Admin Xrace</seg>
+			</tuv>
+		</tu>
 	</body>
 </tmx>
