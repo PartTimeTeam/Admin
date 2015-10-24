@@ -1,7 +1,7 @@
 <?php
 /**
  * Translate utilities
- * @author TuanAnh
+ * @author Phuong nguyen
  *
  */
 class UtilTranslator {

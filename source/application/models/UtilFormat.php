@@ -1,7 +1,7 @@
 <?php
 /**
  * Format utilities
- * @author TuanAnh
+ * @author Phuong nguyen
  *
  */
 class UtilFormat{

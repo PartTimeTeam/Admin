@@ -1,7 +1,7 @@
 <?php
 /**
  * Process for user
- * @author TuanAnh
+ * @author Phuong nguyen
  *
  */
 class Users extends Zend_Db_Table_Abstract

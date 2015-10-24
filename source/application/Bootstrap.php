@@ -141,7 +141,7 @@ class Bootstrap extends Zend_Application_Bootstrap_BootstrapAbstract {
             }
 
             $dbAdapters [$key] = $dbAdapter;
-            if ($key == 'default') {
+            if ($key == 'default'|| $key == 'other') {
                 Zend_Db_Table::setDefaultAdapter ( $dbAdapter );
             }
         }

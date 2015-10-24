@@ -1,7 +1,7 @@
 <?php
 /**
  * Model abstract
- * @author TuanAnh
+ * @author Phuong nguyen
  *
  */
 class Model_Abstract extends Zend_Db_Table_Abstract {

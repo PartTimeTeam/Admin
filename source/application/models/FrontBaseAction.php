@@ -2,7 +2,7 @@
 
 /**
  * Base controller for site module
- * @author TuanAnh
+ * @author Phuong nguyen
  *
  */
 class FrontBaseAction extends Zend_Controller_Action{

@@ -1,7 +1,7 @@
 <?php
 /**
  * Acl resources
- * @author TuanAnh
+ * @author Phuong Nguyen
  *
  */
 class Model_Acl_Resources extends Model_Abstract {

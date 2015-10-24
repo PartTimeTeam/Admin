@@ -2,7 +2,7 @@
 
 /**
  * REST Client Helper
- * @author TuanAnh
+ * @author Phuong nguyen
  *
  */
 class RESTClient{

@@ -1,7 +1,7 @@
 <?php
 /**
  * Language model
- * @author TuanAnh
+ * @author Phuong Nguyen
  *
  */
 class Languages extends Zend_Db_Table_Abstract
