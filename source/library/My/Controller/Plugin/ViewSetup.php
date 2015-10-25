@@ -87,6 +87,8 @@ class My_Controller_Plugin_ViewSetup extends Zend_Controller_Plugin_Abstract {
         $view->headLink()->appendStylesheet( "/resources/css/font-awesome.min.css" );
         $view->headLink()->appendStylesheet( "/resources/css/pnotify.custom.min.css" );
         $view->headLink()->appendStylesheet( "/resources/css/animate.css" );
+        $view->headLink()->appendStylesheet( "/resources/css/datepicker.css" );
+        $view->headLink()->appendStylesheet( "/resources/css/bootstrap-datetimepicker.min.css" );
 //         if ( DEFAULT_MENU == HORIZONTAL ) {
 //             $view->headLink()->appendStylesheet( "/resources/css/left_menu.css" );
 //         }

@@ -54,7 +54,10 @@ head.ready(function () {
 	  					   },
 	  					 {
 	  							"render": function ( data, type, row ) {
-	  								return '<button type="button" onclick="PaymentAdmin.site.pages.User.deleteUser('+row['user_id']+')" class="btn btn-danger" rel="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash-o"></i></button>';
+	  								var action = '';
+	  								action += '<button type="button" onclick="window.location =\'/user/detail/id/'+row['user_id']+'\'" class="btn btn-primary" rel="tooltip" data-placement="top" title="Delete"><i class="fa fa-pencil-square-o"></i></button> &nbsp;';
+	  								action += '<button type="button" onclick="PaymentAdmin.site.pages.User.deleteUser('+row['user_id']+')" class="btn btn-danger" rel="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash-o"></i></button>';
+	  								return action;
 	  							},
 	  							"targets": 5,
 	  							"orderable": false,
@@ -96,6 +99,7 @@ head.ready(function () {
 		}
 	});
 });
+
 
 
 

@@ -169,6 +169,7 @@ class Users extends Zend_Db_Table_Abstract
             $datain['status'] = $data['status'];
         }
         if ( empty( $data["id"] ) == false )  {
+        	unset($data['password']);
             $where[] = $this->getAdapter()->quoteInto( "user_id = ?", $data["id"], Zend_Db::INT_TYPE );
             $where[] = $this->getAdapter()->quoteInto( "status <> ?", USER_STATUS_DELETED );
 //             UtilLogs::logHistory( LOG_ACTION_EDIT, Constants::$controllerUtilMapping[Constants::USER_CTRL], $data["id"], '', array(), $datain );

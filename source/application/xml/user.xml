@@ -25,6 +25,12 @@
 	                <NotEmpty message="missing-password" />
 	            </validate>
 			</password>
+			<retype-password>
+				<validate>
+					<NotEmpty message="please-re-enter-password" />
+		            <MatchData custom="true" class="UtilValidator" message="password-not-match" skip="password" with='password'/>
+				</validate>
+			</retype-password>
 		</checkrules>
 	</form>
 </root>

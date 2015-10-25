@@ -76,15 +76,25 @@ class Site_UserController extends FrontBaseAction {
     	if( $this->request->isPost() ) {
     		$xml = APPLICATION_PATH.'/xml/user.xml';
     		$error = BaseService::checkInputData( $xml, $this->post_data);
-    		$rs = $mdlUser->fetchUserByEmail( $this->post_data['email']);
-    		if ( empty( $rs ) == false ){
-    			$error[] = 'Exist email';
+    		if ( empty( $this->post_data['id']) == false ){
+    			unset( $error['password'] );
     		}
+    		$email = $mdlUser->fetchUserByEmail( $this->post_data['email']);
+    		$username = $mdlUser->fetchUserByUserName( $this->post_data['user_name']);
     		
     		if( empty( $error ) == true ) {
+    			if ( empty( $userId ) > 0 ){
+    				$result = $mdlUser->saveUser( $this->post_data );
+    			}
     			$result = $mdlUser->saveUser( $this->post_data );
     		}else {
     			$userInfo = $this->post_data;
+    			if ( empty( $username ) == false ){
+    				$error['user_name'] = 'User name already exist.';
+    			}
+    			if ( empty( $email ) == false ){
+    				$error['email'] = 'Email already exist.';
+    			}
     			$error = $error;
     		}
     	}

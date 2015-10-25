@@ -1,6 +1,11 @@
 <div class="container-fluid">
 	<div class="row">
-	    <div class="col-md-12" style="align:center">
+		<div class="col-md-12 form-group">
+			<strong>USER DETAIL</strong>
+		</div>
+	</div>
+	<div class="row">
+	    <div class="col-md-12">
 	      <form class="form-horizontal" role="form" method="POST">
 	      <?php echo $this->partial( "/partials/_errors.phtml", array( "errors" => $this->error ) ); ?>
 	        <fieldset>
@@ -9,9 +14,16 @@
 	    			<label>User Name</label>
 	    			<input type="text" placeholder="User Name" class="form-control" name="user_name" value="<?php echo @$this->info['user_name']?>">
 	    		</div>
-	    		<div class="col-md-6">
+	    		
+	        </div>
+	        <div class="form-group col-md-8 <?php if(intval( @$this->id ) > 0){ echo 'hidden'; } ?>">
+	        	<div class="col-md-6">
 	    			<label>Password</label>
-	    			<input <?php if(intval( @$this->id ) > 0){ echo "disabled"; } ?> type="password" placeholder="Password" class="form-control" name="password" value="<?php echo @$this->info['password']?>">
+	    			<input type="password" placeholder="Password" class="form-control" name="password" value="<?php echo @$this->info['password']?>">
+	    		</div>
+	    		<div class="col-md-6">
+	    			<label>Retype Password</label>
+	    			<input type="password" placeholder="Password" class="form-control" name="retype-password" value="<?php echo @$this->info['password']?>">
 	    		</div>
 	        </div>
 	        <div class="form-group col-md-8">

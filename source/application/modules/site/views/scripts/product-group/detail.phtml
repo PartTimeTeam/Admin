@@ -1,0 +1,132 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12 form-group">
+			<strong>PRODUCT GROUP DETAIL</strong>
+		</div>
+	</div>
+	<div class="row">
+	    <div class="col-md-12">
+	      <form class="form-horizontal" role="form" method="POST" name="productGroupForm">
+	      <?php echo $this->partial( "/partials/_errors.phtml", array( "errors" => $this->error ) ); ?>
+	        <fieldset>
+	    	<div class="form-group col-md-12">
+	    		<div class="col-md-3">
+	    			<label>Product Name</label>
+	    			<input type="text" placeholder="Product Name" class="form-control" name="product_name" value="<?php echo @$this->info['product_name']?>">
+	    		</div>
+	    		<div class="col-md-3">
+	    			<label>Logo URL</label>
+	    			<input type="text" placeholder="Logo URL" class="form-control" name="logo_url" value="<?php echo @$this->info['logo_url']?>">
+	    		</div>
+	    		<div class="col-md-3">
+	    			<label>Product Rating</label>
+	    			<input type="text" placeholder="Product Rating" class="form-control product_rating" name="product_rating" value="<?php echo @$this->info['product_rating']?>">
+	    		</div>
+	    		<div class="col-md-3">
+	    			<label>Status</label>
+	    			<input type="text" placeholder="Status" class="form-control status" name="status" value="<?php echo @$this->info['status']?>">
+	    		</div>
+	        </div>
+	        <div class="form-group col-md-12">
+	    		<div class="col-md-3">
+	    			<label>City</label>
+	    			<input type="text" placeholder="City" class="form-control" name="city" value="<?php echo @$this->info['city']?>">
+	    		</div>
+	    		<div class="col-md-3">
+	    			<label>Address</label>
+	    			<input type="text" placeholder="Address" class="form-control" name="address" value="<?php echo @$this->info['address']?>">
+	    		</div>
+	    		<div class="col-md-3">
+	    			<label>From Day</label>
+	    			<input type="text" placeholder="From Day" class="form-control" name="from_day" value="<?php echo @$this->info['from_day']?>">
+	    		</div>
+	    		<div class="col-md-3">
+	    			<label>To Day</label>
+	    			<input type="text" placeholder="To Day" class="form-control" name="to_day" value="<?php echo @$this->info['to_day']?>">
+	    		</div>
+	        </div>
+	        <div class="form-group col-md-12">
+	    		<div class="col-md-3">
+	    			<label>From Time</label>
+	    			<input type="text" placeholder="From Time" class="form-control" name="from_time" value="<?php echo @$this->info['from_time']?>">
+	    		</div>
+	    		<div class="col-md-3">
+	    			<label>To Time</label>
+	    			<input type="text" placeholder="To Time" class="form-control" name="to_time" value="<?php echo @$this->info['to_time']?>">
+	    		</div>
+	    		<div class="col-md-3">
+	    			<label>Duration</label>
+	    			<input type="text" placeholder="Duration" class="form-control duration" name="duration" value="<?php echo @$this->info['duration']?>">
+	    		</div>
+	    		<div class="col-md-3">
+	    			<label>Difficulty</label>
+	    			<input type="text" placeholder="Difficulty" class="form-control" name="difficulty" value="<?php echo @$this->info['difficulty']?>">
+	    		</div>
+	        </div>
+	        <div class="form-group col-md-12">
+	    		<div class="col-md-3">
+	    			<label>Local Knowledge</label>
+	    			<input type="text" placeholder="Local Knowledge" class="form-control" name="local_knowledge" value="<?php echo @$this->info['local_knowledge']?>">
+	    		</div>
+	    		<div class="col-md-3">
+	    			<label>Created At</label>
+	    			<input type="text" id="created_at" placeholder="Created At" class="form-control datepicker" name="created_at" value="<?php echo @$this->info['created_at']?>">
+	    		</div>
+	    		<div class="col-md-3">
+	    			<label>Product Min</label>
+	    			<input type="text" placeholder="Product Min" class="form-control product_min" name="product_min" value="<?php echo @$this->info['product_min']?>">
+	    		</div>
+	    		<div class="col-md-3">
+	    			<label>Product Max</label>
+	    			<input type="text" placeholder="Product Max" class="form-control product_max" name="product_max" value="<?php echo @$this->info['product_max']?>">
+	    		</div>
+	        </div>
+	        <div class="form-group col-md-12">
+	    		<div class="col-md-3">
+	    			<label>Member Min</label>
+	    			<input type="text" placeholder="Member Min" class="form-control member_min" name="member_min" value="<?php echo @$this->info['member_min']?>">
+	    		</div>
+	    		<div class="col-md-3">
+	    			<label>Member Max</label>
+	    			<input type="text" placeholder="Member Max" class="form-control member_max" name="member_max" value="<?php echo @$this->info['member_max']?>">
+	    		</div>
+	    		<div class="col-md-3">
+	    			<label>Gold</label>
+	    			<input type="text" placeholder="Gold" class="form-control" name="gold" value="<?php echo @$this->info['gold']?>">
+	    		</div>
+	    		<div class="col-md-3">
+	    			<label>Video Url</label>
+	    			<input type="text" placeholder="Video Url" class="form-control" name="video_url" value="<?php echo @$this->info['video_url']?>">
+	    		</div>
+	        </div>
+	        <div class="form-group col-md-12">
+	    		<div class="col-md-3">
+	    			<label>Rule Id</label>
+	    			<input type="text" placeholder="Rule Id" class="form-control rule_id" name="rule_id" value="<?php echo @$this->info['rule_id']?>">
+	    		</div>
+	    		<div class="col-md-3">
+	    			<label>Product Type Id</label>
+	    			<input type="text" placeholder="Product Type Id" class="form-control" name="product_group_type_id" value="<?php echo @$this->info['product_type_id']?>">
+	    		</div>
+	        </div>
+			<div class="form-group col-md-12">
+	    		<div class="col-md-6">
+	    			<label>Description</label>
+					<textarea cols="3" class="form-control" name="description"><?php echo @$this->info['description']?></textarea>
+	    		</div>
+	    		<div class="col-md-6">
+	    			<label>Long Description</label>
+					<textarea cols="3" class="form-control" name="long_description"><?php echo @$this->info['long_description']?></textarea>
+	    		</div>
+	        </div>
+	          <div class="form-group col-md-12">
+	              <div class="pull-right">
+	                <button type="button" class="btn btn-default" onclick="window.location = '<?php echo '/'.$this->controller?>';">CANCEL</button>
+	                <button type="submit" class="btn btn-primary">SUBMIT</button>
+	              </div>
+	          </div>
+	        </fieldset>
+	      </form>
+	    </div><!-- /.col-lg-12 -->
+	</div><!-- /.row -->
+</div>
