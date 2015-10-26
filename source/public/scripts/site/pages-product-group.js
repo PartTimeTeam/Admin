@@ -18,74 +18,20 @@ head.ready(function () {
 	        var aoColumns = [
 	    	                 { "data": "product_group_id"},
 	    	                 { "data": "product_name" },
-	    	                 { "data": "description" },
-	    	                 { "data": "long_description" },
-	    	                 { "data": "logo_url" },
 	    	                 { "data": "product_rating" },
 	    	                 { "data": "status" },
 	    	                 { "data": "city" },
-	    	                 { "data": "address" },
-	    	                 { "data": "from_day" },
-	    	                 { "data": "to_day" },
-	    	                 { "data": "from_time" },
-	    	                 { "data": "to_time" },
 	    	                 { "data": "duration" },
 	    	                 { "data": "difficulty" },
 	    	                 { "data": "local_knowledge" },
 	    	                 { "data": "created_at" },
-	    	                 { "data": "product_min" },
-	    	                 { "data": "product_max" },
 	    	                 { "data": "member_min" },
 	    	                 { "data": "member_max" },
 	    	                 { "data": "gold" },
-	    	                 { "data": "video_url" },
 	    	                 { "data": "rule_id" },
-	    	                 { "data": "product_group_type_id" },
 	    	                 { "data": "Action_Table"}
 	    	];
 	        var columnDefs = [
-	  						{
-	  						    "render": function (data, type, row) {
-	  						    	var desc = '';
-	  						    	if ( XRace.isDefined( row['description'] )){
-	  						    		if( row['description'].length > 30 ){
-	  						    			desc =  row['description'].substring( 0, 29 )+'...';
-	  						    		}
-	  						    	}
-	  						    	return desc;
-	  						    },
-	  						    "orderable": false,
-	  						    "targets": 2,
-	  						    "data" : "description"
-	  						},
-	  						{
-	  						    "render": function (data, type, row) {
-	  						    	var long_desc = '';
-	  						    	if ( XRace.isDefined( row['long_description'] )){
-	  						    		if( row['long_description'].length > 30 ){
-	  						    			long_desc =  row['long_description'].substring( 0, 29 )+'...';
-	  						    		}
-	  						    	}
-	  						    	return long_desc;
-	  						    },
-	  						    "orderable": false,
-	  						    "targets": 3,
-	  						    "data" : "long_description"
-	  						},
-	  						{
-	  						    "render": function (data, type, row) {
-	  						    	var logo_url = '';
-	  						    	if ( XRace.isDefined( row['logo_url'] )){
-	  						    		if( row['logo_url'].length > 30 ){
-	  						    			logo_url =  row['logo_url'].substring( 0, 29 )+'...';
-	  						    		}
-	  						    	}
-	  						    	return logo_url;
-	  						    },
-	  						    "orderable": false,
-	  						    "targets": 4,
-	  						    "data" : "logo_url"
-	  						},
 	  					 {
 	  							"render": function ( data, type, row ) {
 	  								var action = '';
@@ -93,7 +39,7 @@ head.ready(function () {
 	  								action += '<button type="button" onclick="PaymentAdmin.site.pages.ProductGroup.deleteProductGroup('+row['product_group_id']+')" class="btn btn-danger" rel="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash-o"></i></button>';
 	  								return action;
 	  							},
-	  							"targets": 25,
+	  							"targets": 13,
 	  							"orderable": false,
 	  							"data": "Action_Table"
 	  					   }
