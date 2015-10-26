@@ -1,0 +1,32 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div>
+                <h3><?php echo $this->translate( "question" ); ?></h3>
+            </div>
+            <hr/>
+        </div>
+    </div>
+    <div class="row">
+    	<div class="col-md-12 text-left position">
+			<button type="button" class="btn btn-success" onclick="window.location='/<?php echo $this->controller;?>/detail';"><i class="fa fa-crosshairs"></i> <?php echo $this->translate('create-question')?></button>
+	    </div>
+	    <div class="col-md-12">
+	    	<table id="questionTable" class="data-table display no-ordering" cellspacing="0" width="100%">
+	    		<thead>
+	    			<tr>
+	    				<th><?php echo $this->translate('id')?></th>
+	    				<th><?php echo $this->translate('content');?></th>
+	    				<th><?php echo $this->translate('type');?></th>
+	    				<th><?php echo $this->translate('answer');?></th>
+	    				<th><?php echo $this->translate('status');?></th>
+	    				<th><?php echo $this->translate('game');?></th>
+	    				<th><?php echo $this->translate('screen');?></th>
+	    				<th><?php echo $this->translate('created-by');?></th>
+	    				<th width="35px" ></th>
+	    			</tr>
+	    		</thead>
+	    	</table>
+	    </div>
+    </div>
+</div>

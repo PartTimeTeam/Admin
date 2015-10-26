@@ -11,7 +11,7 @@
 				<seg>Ngôn Ngữ</seg>
 			</tuv>
 		</tu>
-		<tu tuid='admin-xrace'>
+		<tu tuid='xrace-admin'>
 			<tuv xml:lang='en'>
 				<seg>Admin Xrace</seg>
 			</tuv>
