@@ -13,7 +13,6 @@ head.ready(function () {
 	    changeCaptCha: function(){
 	    	var options = {
                     success: function(data) {
-                    	console.log(data);
                     	if (data.Code > 0) {
 				    	}
                     },

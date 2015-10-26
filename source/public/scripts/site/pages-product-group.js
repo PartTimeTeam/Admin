@@ -50,7 +50,6 @@ head.ready(function () {
          * delete
          */
         deleteProductGroup: function( id ) {
-        	console.log(id);
             var me = this;
             XRace.helper.Modal.confirm( "Are you sure want to delete this product group", function(result){
                 if (result) {

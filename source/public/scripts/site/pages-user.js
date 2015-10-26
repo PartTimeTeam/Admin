@@ -70,7 +70,6 @@ head.ready(function () {
          * delete user
          */
         deleteUser: function( id ) {
-        	console.log(id);
             var me = this;
             XRace.helper.Modal.confirm( "Are you sure want to delete this user", function(result){
                 if (result) {

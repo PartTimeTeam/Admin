@@ -48,7 +48,6 @@
             function loadCommonJSFiles() {
                 head.load(<?php echo implode( ',', $this->autoHeadScripts ) ?>);
                 PNotify.prototype.options.styling = "fontawesome";
-                console.log(<?php echo implode( ',', $this->autoHeadScripts ) ?>);
             }
 
             head.ready(function () {
