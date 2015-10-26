@@ -163,20 +163,20 @@ class Users extends Zend_Db_Table_Abstract
                 'email'           => $data['email'],
         );
         if ( empty( $data['password'] ) == false ) {
-            $datain['password'] = UtilEncryption::encryptPassword( $data['password'] );
+            $datain['password'] = UtilEncryption::encryptPassword( $data['password'], 'md5' );
         }
         if ( isset( $data['status'] ) == true ) {
             $datain['status'] = $data['status'];
         }
         if ( empty( $data["id"] ) == false )  {
-        	unset($data['password']);
+        	unset($datain['password']);
+        	unset($datain['email']);
+        	unset($datain['user_name']);
             $where[] = $this->getAdapter()->quoteInto( "user_id = ?", $data["id"], Zend_Db::INT_TYPE );
             $where[] = $this->getAdapter()->quoteInto( "status <> ?", USER_STATUS_DELETED );
-//             UtilLogs::logHistory( LOG_ACTION_EDIT, Constants::$controllerUtilMapping[Constants::USER_CTRL], $data["id"], '', array(), $datain );
             return $this->update( $datain, $where );
         } else {
             $userId = $this->insert( $datain );
-//             UtilLogs::logHistory( LOG_ACTION_ADD, Constants::$controllerUtilMapping[Constants::USER_CTRL], $userId, '', array(), $datain );
             return $userId;
         }
     }

@@ -76,25 +76,23 @@ class Site_UserController extends FrontBaseAction {
     	if( $this->request->isPost() ) {
     		$xml = APPLICATION_PATH.'/xml/user.xml';
     		$error = BaseService::checkInputData( $xml, $this->post_data);
-    		if ( empty( $this->post_data['id']) == false ){
-    			unset( $error['password'] );
+    		if ( $userId == 0 ){
+	    		$email = $mdlUser->fetchUserByEmail( $this->post_data['email']);
+	    		$username = $mdlUser->fetchUserByUserName( $this->post_data['user_name']);
+	    		if ( empty( $username ) == false ){
+	    			$error['user_name'] = 'User name already exist.'; 
+	    		} else if( empty( $email ) == false ) {
+	    			$error['email'] = 'Email already exist.';
+	    		}
+    		} else {
+    			unset( $error['email']);
+    			unset( $error['user_name']);
     		}
-    		$email = $mdlUser->fetchUserByEmail( $this->post_data['email']);
-    		$username = $mdlUser->fetchUserByUserName( $this->post_data['user_name']);
-    		
     		if( empty( $error ) == true ) {
-    			if ( empty( $userId ) > 0 ){
     				$result = $mdlUser->saveUser( $this->post_data );
-    			}
-    			$result = $mdlUser->saveUser( $this->post_data );
+    				$this->_redirect( '/'.$this->controller );
     		}else {
     			$userInfo = $this->post_data;
-    			if ( empty( $username ) == false ){
-    				$error['user_name'] = 'User name already exist.';
-    			}
-    			if ( empty( $email ) == false ){
-    				$error['email'] = 'Email already exist.';
-    			}
     			$error = $error;
     		}
     	}
