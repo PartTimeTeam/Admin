@@ -27,3 +27,25 @@
 	    </div>
     </div>
 </div>
+<a id="download">aaaaaa</a>
+<script>
+jQuery.download = function(url, data, method){
+    //url and data options required
+    if( url && data ){
+        //data can be string of parameters or array/object
+        data = typeof data == 'string' ? data : jQuery.param(data);
+        //split params into form inputs
+        var inputs = '';
+        jQuery.each(data.split('&'), function(){
+            var pair = this.split('=');
+            inputs+='<input type="hidden" name="'+ pair[0] +'" value="'+ pair[1] +'" />';
+        });
+        //send request
+        jQuery('<form action="'+ url +'" method="'+ (method||'post') +'">'+inputs+'</form>')
+        .appendTo('body').submit().remove();
+    };
+};
+	$("#download").click(function(){
+		$.download('http://45.32.248.222:9091/upload/2610201517435711949277_858496857568954_4873679657049002585_n.jpg','filename=aaaa');
+		});
+</script>

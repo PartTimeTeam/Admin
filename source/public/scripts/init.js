@@ -86,8 +86,11 @@ head.load(
 	'/scripts/core/String.js',
     '/scripts/core/Ajax.js',
 	'/scripts/helper/Modal.js',
+	'/scripts/helper/DateTime.js',
 	'/scripts/ui/Helper.js',
-	'/scripts/ui/Widget.js'
+	'/scripts/ui/Widget.js',
+	'/scripts/helper/Money.js',
+	'/libs/jquery.Downloadfile.js'
 );
 if ( Language == "es" ) {
 	head.load(

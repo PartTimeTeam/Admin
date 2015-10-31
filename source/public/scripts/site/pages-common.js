@@ -38,6 +38,20 @@ Singleton(siteConfig.namespace + '.Common', {
         var url = "/common/language";
         XRace.Ajax.get(url, {langCode: langCode}, options);
     },
+    executeSearchForm: function(formId, tableId) {
+    	var t = $('#' + tableId).DataTable();
+    	$("#" + formId + " [item-type=search]").each(function(){
+    		var value = $(this).val();
+    		var column = $(this).attr('mapping-column');
+    		var dataFormat = $(this).attr('data-format');
+    		if ( XRace.isDefined(dataFormat) && dataFormat != '' ) {
+    			value = XRace.helper.DateTime.formatValueSearchDate( value , dataFormat );
+    		}
+    		console.log(value);
+    		t.column(column).search(value, false, false);
+    	});
+    	t.draw();
+    }
 });
 
 });

@@ -9,7 +9,7 @@
 					<a href="/user" >
 						<h2>
 							<i class="fa fa-users"></i>
-							 <span>USER</span> 
+							 <span><?php echo strtoupper($this->translate('user'))?></span> 
 						</h2>
 					</a>
 				</div>
@@ -19,7 +19,7 @@
 					<a href="/product-group" >
 						<h2>
 							<i class="fa fa-gift"></i>
-							<span class="tow-row">PRODUCT GROUP</span> 
+							<span class="tow-row"><?php echo strtoupper($this->translate('product-group'))?></span> 
 						</h2>
 					</a>
 				</div>
@@ -29,7 +29,7 @@
 					<a href="/product" >
 						<h2>
 							<i class="fa fa-life-ring"></i>
-							<span>PRODUCT</span> 
+							<span><?php echo strtoupper($this->translate('product'))?></span> 
 						</h2>
 					</a>
 				</div>
@@ -39,12 +39,21 @@
 					<a href="#" >
 						<h2>
 							<i class="fa fa-cog"></i>
-							<span>CONFIG GAME</span> 
+							<span><?php echo strtoupper($this->translate('config-game'))?></span> 
 						</h2>
 					</a>
 				</div>
 			</div>
-			
+			<div class="col-sm-6 col-md-3">
+				<div class="thumbnail tile tile-medium text-center">
+					<a href="#" >
+						<h2>
+							<i class="fa fa-cog"></i>
+							<span><?php echo strtoupper($this->translate('order'))?></span> 
+						</h2>
+					</a>
+				</div>
+			</div>
         </div>
     </div>
 </div>

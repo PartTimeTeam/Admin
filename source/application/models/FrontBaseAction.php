@@ -29,6 +29,7 @@ class FrontBaseAction extends Zend_Controller_Action{
      * @see Zend_Controller_Action::init()
      */
     public function init() {
+    	header('Content-Type: text/html; charset=utf-8');
         $this->view->useBlackBackground = false;
         $this->view->isMainPage = false;
         $this->logger = Zend_Registry::get( 'logger' );

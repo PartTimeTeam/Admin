@@ -18,7 +18,26 @@ head.ready(function() {
 			me.setupDatePickers();
 			me.setupModals();
 			me.setupSubmitButtons();
+			me.setupSuggestions(container);
 //			me.setupMaskedInputs(container);
+		},
+		setupSuggestions: function(container) {
+			var me = this;
+			$("select", container).each(function(){
+				me.setupSuggestion($(this));
+			});
+		},
+		setupSuggestion: function(suggestionObjOrId) {
+			var suggestion = XRace.ui.Helper.getUiSelector(suggestionObjOrId);
+			var opts = {};
+			if (suggestion.parents("div.dataTables_length").length > 0) {
+	        	return false;
+	        }
+	        // Do nothing to an already setup table
+	        if (suggestion.hasClass('no-search')) {
+	        	opts = {minimumResultsForSearch: -1};
+	        }
+	        suggestion.select2(opts);
 		},
 		setupSubmitButtons: function(){
 			$(document).on( "click", 'button[data-type=submit]', {}, function() {   
