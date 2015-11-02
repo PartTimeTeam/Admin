@@ -50,8 +50,11 @@ class Site_ProductGroupController extends FrontBaseAction {
     		$xml = APPLICATION_PATH.'/xml/product_group.xml';
     		$error = BaseService::checkInputData( $xml, $this->post_data);
     		//=============upload================== 		
-    		$target_dir = BASE_PATH.'/data/upload/';
-    		$target_file = $target_dir . basename($_FILES["logo_url"]["name"]);
+    		$target_dir = PUBLIC_PATH.'/upload/';
+    		$date = getdate();
+    		$date = $date['mday'].$date['mon'].$date['year'].$date['hours'].$date['minutes'].$date['seconds'];
+    		$file_name = $date.$_FILES["logo_url"]["name"];
+    		$target_file = $target_dir . basename($file_name);
     		$uploadOk = 1;
     		$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
     		// Allow certain file formats
@@ -65,11 +68,11 @@ class Site_ProductGroupController extends FrontBaseAction {
     			// if everything is ok, try to upload file
     		} else {
     			if ( $id > 0 && empty( $info['logo_url'] ) == false ){
-    				if (file_exists($info['logo_url'])) {
-    					unlink($info['logo_url']);
+    				if ( file_exists(PUBLIC_PATH.'/upload/'.$info['logo_url']) ) {
+    					unlink(PUBLIC_PATH.'/upload/'.$info['logo_url']);
     				}
     			}
-    			$this->post_data['logo_url'] = $target_file;
+    			$this->post_data['logo_url'] = $file_name;
     			if (move_uploaded_file($_FILES["logo_url"]["tmp_name"], $target_file)) {
     				echo "The file ". basename( $_FILES["logo_url"]["name"]). " has been uploaded.";
     			} else {

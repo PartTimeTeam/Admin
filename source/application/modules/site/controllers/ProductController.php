@@ -38,7 +38,7 @@ class Site_ProductController extends FrontBaseAction {
     	$data = array();
     	$date = array();
     	if ( $this->_request->isPost() ) {
-    		$uploaddir = BASE_PATH.'/data/upload/';
+    		$uploaddir = PUBLIC_PATH.'/upload/';
     		foreach ( $_FILES as $nameInput => $value ){
     			if($_FILES["product"]["error"] != 0) {
     				echo '<div style="margin: -15px 5px;" class="alert alert-danger alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>Please choose file upload</div>';

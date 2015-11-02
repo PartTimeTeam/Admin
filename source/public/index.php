@@ -2,6 +2,7 @@
 
 define('BASE_PATH', dirname(dirname(__FILE__)));
 define('APPLICATION_PATH', BASE_PATH . '/application');
+define( 'PUBLIC_PATH', BASE_PATH. '/public');
 define('LANG_PATH', BASE_PATH . '/data/lang');
 set_include_path( get_include_path() .
                   PATH_SEPARATOR . APPLICATION_PATH . '/models' .
