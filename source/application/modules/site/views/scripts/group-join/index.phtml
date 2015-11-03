@@ -2,14 +2,14 @@
     <div class="row" style="padding-bottom: 20px">
         <div class="col-md-12">
             <div>
-                <h3><?php echo $this->translate( "user-list" ); ?></h3>
+                <h3><?php echo $this->translate( "group-join-list" ); ?></h3>
             </div>
             <hr/>
-            <form class="form-inline search-form search-form-datatable" role="form" method="get" 
+            <!--form class="form-inline search-form search-form-datatable" role="form" method="get" 
             		onsubmit="return false;" action="" id="searchGroupUserForm">
             		<div class="container-left ">
-            			<div class="col-md-12 padding-left padding-right">
-            				<div class="form-group col-md-3 padding-left">
+            			<div class="col-md-12 padding-right">
+            				<div class="form-group col-md-3">
                 				<label for=""><?php echo $this->translate( 'group-name' ); ?></label>
                 				<input id="userName" type="text" class="form-control searchItem" placeholder="<?php echo $this->translate( 'group-name' ); ?>"
                            			mapping-column="1" item-type="search" data-type="" data-format=""/>
@@ -19,25 +19,19 @@
                 				<input id="email" type="text" class="form-control searchItem" placeholder="<?php echo $this->translate( 'user-name-leader' ); ?>"
                            			mapping-column="3" item-type="search" data-type="" data-format=""/>
                 			</div>
-							<div class="form-group col-md-2">
+							<div class="form-group col-md-3">
                 				<label for=""><?php echo $this->translate( 'email' ); ?></label>
                 				<input id="email" type="text" class="form-control searchItem" placeholder="<?php echo $this->translate( 'email' ); ?>"
                            			mapping-column="5" item-type="search" data-type="" data-format=""/>
                 			</div>
-							<div class="form-group col-md-2">
+							<div class="form-group col-md-3 padding-right">
                 				<label for=""><?php echo $this->translate( 'phone' ); ?></label>
                 				<input id="email" type="text" class="form-control searchItem" placeholder="<?php echo $this->translate( 'phone' ); ?>"
                            			mapping-column="7" item-type="search" data-type="" data-format=""/>
                 			</div>
-                			
-                			<div class="form-group col-md-2 padding-right">
-                				<label for=""><?php echo $this->translate( 'create-date' ); ?></label>
-                				<input id="createDate" type="text" class="form-control searchItem datepicker" placeholder="<?php echo $this->translate( 'created-date' ); ?>"
-                           			mapping-column="8" item-type="search" data-type="" data-format="dd-mm-yyyy" format='yyyy-mm-dd'/>
-                			</div>
             			</div>
             			<div class="form-group col-md-12 padding-right">
-				            <p class="btn-search">
+				            <p class="btn-search ">
 				                <button type="button" class="btn btn-primary" id="btnSearch" onclick="PaymentAdmin.site.pages.Common.executeSearchForm('searchGroupUserForm', 'groupUserTable');">
 				                    <i class="fa fa-search"></i> <?php echo $this->translate( 'search' ); ?>
 				                </button>
@@ -45,23 +39,19 @@
 				        </div>
             		</div>
             		
-            </form>
+            </form-->
     	</div>
     </div>
     <div class="row">
 	    <div class="col-md-12">
-	    	<table id="groupUserTable" class="data-table display disable-state-save" cellspacing="0" width="">
+	    	<table id="groupJoinTable" class="data-table display disable-state-save" cellspacing="0" width="">
 	    		<thead>
 	    			<tr>
 	    				<th width="5%">ID</th>
-	    				<th width="10%">Group Name</th>
-	    				<th>User Create</th>
-	    				<th width="5%">Leader</th>
-	    				<th width="10%">Group Slogan</th>
-	    				<th width="5%">Email Leader</th>
+	    				<th width="10%">Group Id</th>
+	    				<th>User Id</th>
 	    				<th width="10%">Status</th>
-	    				<th width="10%">Phone</th>
-	    				<th width="10%">Create At</th>
+	    				<th width="10%">Create Date</th>
 	    				<th width="35px">Action</th>
 	    			</tr>
 	    		</thead>

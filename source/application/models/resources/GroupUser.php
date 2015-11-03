@@ -45,8 +45,6 @@ class GroupUser extends Zend_Db_Table_Abstract
         	$select = $select->where( "created_at >= ?", $data["created_at"].' 00:00:00' );
         	$select = $select->where( "created_at <= ?", $data["created_at"].' 23:59:59' );
         }
-        //$select->joinLeft( array('us' => 'users'),'group_users.user_create = us.user_id',array('us.user_name') );
-		
     	//check count only purpose
     	if( empty( $data['count_only'] ) == true || $data['count_only'] != 1 ) {
     		if ( empty( $data["order"] ) == false ) {

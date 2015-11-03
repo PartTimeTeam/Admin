@@ -1,0 +1,40 @@
+<div class="container-fluinvite">
+	<div class="row">
+		<div class="col-md-12 form-group">
+			<strong>GROUP INVITE DETAIL</strong>
+		</div>
+	</div>
+	<div class="row">
+	    <div class="col-md-12">
+	      <form class="form-horizontal"  role="form" method="POST" name="memberDetailForm">
+	      <?php echo $this->partial( "/partials/_errors.phtml", array( "errors" => $this->error ) ); ?>
+	        <fieldset>
+	    	<div class="form-group col-md-12 padding-right">
+	    		<div class="col-md-3">
+	    			<label><?php echo $this->translate('group-invite')?></label>
+	    			<input disabled="disabled" type="text" placeholder="<?php echo $this->translate('group-invite')?>" class="form-control" name="invite" value="<?php echo @$this->info['group_invite']?>">
+	    		</div>
+	    		<div class="col-md-3">
+	    			<label><?php echo $this->translate('user-invite')?></label>
+	    			<input disabled="disabled" type="text" placeholder="<?php echo $this->translate('user-invite')?>" class="form-control" name="email" value="<?php echo @$this->info['user_invite']?>">
+	    		</div>
+	    		<div class="col-md-3">
+	    			<label><?php echo $this->translate('status')?></label>
+	    			<input type="text" disabled="disabled" placeholder="<?php echo $this->translate('status')?>" class="form-control" name="amount" value="<?php echo @$this->info['status']?>">
+	    		</div>
+	    		<div class="col-md-3 padding-right">
+	    			<label><?php echo $this->translate('create-date')?></label>
+	    			<input type="text" disabled="disabled" placeholder="<?php echo $this->translate('create-date')?>" class="form-control" name="productGroupName" value="<?php echo @$this->info['create_date']?>">
+	    		</div>
+	        </div>
+	        
+	        <div class="form-group col-md-12">
+	            <div class="pull-right">
+	                <button type="button" class="btn btn-default" onclick="window.location = '<?php echo '/'.$this->controller?>';">CANCEL</button>
+	            </div>
+	        </div>
+	        </fieldset>
+	      </form>
+	    </div><!-- /.col-lg-12 -->
+	</div><!-- /.row -->
+</div>
