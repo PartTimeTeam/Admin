@@ -7,7 +7,7 @@ head.ready(function () {
 	        var aoColumns = [
 	    	                 { "data": "group_id"},
 	    	                 { "data": "group_name" },
-	    	                 { "data": "user_create" },
+	    	                 { "data": "name" },
 	    	                 { "data": "user_name_leader" },
 	    	                 { "data": "group_slogan" },
 	    	                 { "data": "email_leader" },

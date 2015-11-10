@@ -1,15 +1,16 @@
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-md-12 form-group">
-			<strong>USER DETAIL</strong>
-		</div>
-	</div>
-	<div class="row">
 	    <div class="col-md-12">
-	      <form class="form-horizontal" role="form" method="POST">
+			<form class="form-inline x-form"  role="form" method="POST" name="memberDetailForm">
+	      	<div class="widget blue">
+	      		<div class="widget-title">
+				    <h4><i class="fa fa-navicon"></i> DETAIL GROUP USER</h4>
+				</div>
+	      		<div class="widget-body search-form">
+	      			<div class="container-left">
 	      <?php echo $this->partial( "/partials/_errors.phtml", array( "errors" => $this->error ) ); ?>
 	        <fieldset>
-	    	<div class="form-group col-md-8">
+	    	<div class="form-group col-md-8 padding-left padding-right">
 	    		<div class="col-md-6">
 	    			<label>User Name</label>
 	    			<input type="text" <?php if ( intval( $this->id) > 0 ) {
@@ -18,7 +19,7 @@
 	    		</div>
 	    		
 	        </div>
-	        <div class="form-group col-md-8 <?php if(intval( @$this->id ) > 0){ echo 'hidden'; } ?>">
+	        <div class="form-group col-md-8 padding-left padding-right <?php if(intval( @$this->id ) > 0){ echo 'hidden'; } ?>">
 	        	<div class="col-md-6">
 	    			<label>Password</label>
 	    			<input type="password" placeholder="Password" class="form-control" name="password" value="<?php echo @$this->info['password']?>">
@@ -28,7 +29,7 @@
 	    			<input type="password" placeholder="Password" class="form-control" name="retype-password" value="<?php echo @$this->info['password']?>">
 	    		</div>
 	        </div>
-	        <div class="form-group col-md-8">
+	        <div class="form-group col-md-8 padding-left padding-right">
 	    		<div class="col-md-6">
 	    			<label>Email</label>
 	    			<input type="text" placeholder="Email" class="form-control" name="email" <?php if ( intval( $this->id) > 0 ) {
@@ -48,6 +49,9 @@
 	              </div>
 	          </div>
 	        </fieldset>
+			</div>
+			</div>
+			</div>
 	      </form>
 	    </div><!-- /.col-lg-12 -->
 	</div><!-- /.row -->

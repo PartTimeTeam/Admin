@@ -15,8 +15,8 @@ class Site_GroupInviteController extends FrontBaseAction {
     	//define columns
     	$columns = array(
     			0=>"id",
-				1=>"group_invite",
-    			2=>"user_invite",
+				1=>"group_name",
+    			2=>"name",
 				3=>"status",
 				4=>"create_date"
 				

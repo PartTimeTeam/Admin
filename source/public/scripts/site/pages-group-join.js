@@ -6,8 +6,8 @@ head.ready(function () {
 	        var me = this;
 	        var aoColumns = [
 	        				{ "data": "id"},
-	    	                 { "data": "group_id"},
-	    	                 { "data": "user_id" },
+	    	                 { "data": "group_name"},
+	    	                 { "data": "name" },
 	    	                 { "data": "status" },
 	    	                 { "data": "create_date" },
 	    	                 { "data": "Action_Table"}

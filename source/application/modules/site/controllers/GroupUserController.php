@@ -44,6 +44,7 @@ class Site_GroupUserController extends FrontBaseAction {
     	unset( $this->post_data['count_only'] );
     
     	$groupUserList = $mdlGroupUser->fetchAllGroupUser( $this->post_data );
+		
     	//return data
     	$return = array();
     	$return['draw'] = $draw;

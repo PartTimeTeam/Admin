@@ -1,12 +1,13 @@
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-md-12 form-group">
-			<strong>PRODUCT GROUP DETAIL</strong>
-		</div>
-	</div>
-	<div class="row">
 	    <div class="col-md-12">
-	      <form class="form-horizontal" enctype="multipart/form-data" role="form" method="POST" name="productGroupForm">
+			<form class="form-inline x-form"  role="form" method="POST" name="memberDetailForm">
+	      	<div class="widget blue">
+	      		<div class="widget-title">
+				    <h4><i class="fa fa-navicon"></i> DETAIL GROUP JOIN</h4>
+				</div>
+	      		<div class="widget-body search-form">
+	      			<div class="container-left">
 	      <?php echo $this->partial( "/partials/_errors.phtml", array( "errors" => $this->error ) ); ?>
 	        <fieldset>
 	    	<div class="form-group col-md-12">
@@ -22,7 +23,7 @@
 	    			<label>Product Rating</label>
 	    			<input type="text" placeholder="Product Rating" class="form-control product_rating" name="product_rating" value="<?php echo @$this->info['product_rating']?>">
 	    		</div>
-	    		<div class="col-md-3">
+	    		<div class="col-md-3 padding-right">
 	    			<label>Status</label>
 	    			<input type="text" placeholder="Status" class="form-control status" name="status" value="<?php echo @$this->info['status']?>">
 	    		</div>
@@ -40,7 +41,7 @@
 	    			<label>From Day</label>
 	    			<input type="text" placeholder="From Day" class="form-control" name="from_day" value="<?php echo @$this->info['from_day']?>">
 	    		</div>
-	    		<div class="col-md-3">
+	    		<div class="col-md-3 padding-right">
 	    			<label>To Day</label>
 	    			<input type="text" placeholder="To Day" class="form-control" name="to_day" value="<?php echo @$this->info['to_day']?>">
 	    		</div>
@@ -58,7 +59,7 @@
 	    			<label>Duration</label>
 	    			<input type="text" placeholder="Duration" class="form-control duration" name="duration" value="<?php echo @$this->info['duration']?>">
 	    		</div>
-	    		<div class="col-md-3">
+	    		<div class="col-md-3 padding-right">
 	    			<label>Difficulty</label>
 	    			<input type="text" placeholder="Difficulty" class="form-control" name="difficulty" value="<?php echo @$this->info['difficulty']?>">
 	    		</div>
@@ -76,7 +77,7 @@
 	    			<label>Product Min</label>
 	    			<input type="text" placeholder="Product Min" class="form-control product_min" name="product_min" value="<?php echo @$this->info['product_min']?>">
 	    		</div>
-	    		<div class="col-md-3">
+	    		<div class="col-md-3 padding-right">
 	    			<label>Product Max</label>
 	    			<input type="text" placeholder="Product Max" class="form-control product_max" name="product_max" value="<?php echo @$this->info['product_max']?>">
 	    		</div>
@@ -94,7 +95,7 @@
 	    			<label>Gold</label>
 	    			<input type="text" placeholder="Gold" class="form-control" name="gold" value="<?php echo @$this->info['gold']?>">
 	    		</div>
-	    		<div class="col-md-3">
+	    		<div class="col-md-3 padding-right">
 	    			<label>Video Url</label>
 	    			<input type="text" placeholder="Video Url" class="form-control" name="video_url" value="<?php echo @$this->info['video_url']?>">
 	    		</div>
@@ -125,7 +126,7 @@
 	    			<label>Description</label>
 					<textarea cols="3" class="form-control" name="description"><?php echo @$this->info['description']?></textarea>
 	    		</div>
-	    		<div class="col-md-6">
+	    		<div class="col-md-6 padding-right">
 	    			<label>Long Description</label>
 					<textarea cols="3" class="form-control" name="long_description"><?php echo @$this->info['long_description']?></textarea>
 	    		</div>
@@ -137,6 +138,9 @@
 	              </div>
 	          </div>
 	        </fieldset>
+			</div>
+			</div>
+			</div>
 	      </form>
 	    </div><!-- /.col-lg-12 -->
 	</div><!-- /.row -->

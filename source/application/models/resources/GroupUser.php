@@ -23,8 +23,9 @@ class GroupUser extends Zend_Db_Table_Abstract
         if( isset( $data['count_only'] ) == true && $data['count_only'] == 1 ) {
         	$select = $select->from( $this->_name, array( "cnt" => new Zend_Db_Expr("COUNT(1)") ) );
         } else {
-        	$select = $select->from( $this->_name )->columns( array( 'created_at' => new Zend_Db_Expr( "DATE_FORMAT(created_at,'%Y-%m-%d %H:%i:%s')") ) );
+        	$select = $select->from( $this->_name )->columns( array( 'group_users.created_at' => new Zend_Db_Expr( "DATE_FORMAT(group_users.created_at,'%Y-%m-%d %H:%i:%s')") ) );
         }
+		$select = $select->joinLeft( 'users', 'users.user_id = group_users.user_create', 'user_name as name' );
         if( empty( $data["group_name"] ) == false ) {
         	$data["group_name"] = $commonObj->quoteLike( $data["group_name"] );
         	$select = $select->where( "group_name like ?", "%" . $data["group_name"] . "%" );
@@ -42,8 +43,8 @@ class GroupUser extends Zend_Db_Table_Abstract
         }
         if( empty( $data["created_at"] ) == false ) {
         	$data["created_at"] = date('Y-m-d',strtotime($data['created_at']));
-        	$select = $select->where( "created_at >= ?", $data["created_at"].' 00:00:00' );
-        	$select = $select->where( "created_at <= ?", $data["created_at"].' 23:59:59' );
+        	$select = $select->where( "group_users.created_at >= ?", $data["created_at"].' 00:00:00' );
+        	$select = $select->where( "group_users.created_at <= ?", $data["created_at"].' 23:59:59' );
         }
     	//check count only purpose
     	if( empty( $data['count_only'] ) == true || $data['count_only'] != 1 ) {
@@ -56,6 +57,7 @@ class GroupUser extends Zend_Db_Table_Abstract
     		$select = $select->limit( $length, $start );
     	}
     	$result = $this->getAdapter()->fetchAll( $select );
+		
     	if( empty( $data['count_only'] ) == false && $data['count_only'] == 1 ) {
     		return $result[0]['cnt'];
     	}

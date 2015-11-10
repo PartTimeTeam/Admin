@@ -1,6 +1,7 @@
 body{
 	font-size:13px;
 	margin-bottom:1em;
+	background: rgba(247, 247, 247, 0.46);
 	}
 .modal{
 	z-index:9999 !important;
@@ -1215,4 +1216,8 @@ button.multiselect {
 /**/
 .tow-row{
 	font-size: 22px;
+}
+/**/
+.x-form{
+	    padding-top: 15px;
 }

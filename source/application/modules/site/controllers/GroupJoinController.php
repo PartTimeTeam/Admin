@@ -15,8 +15,8 @@ class Site_GroupJoinController extends FrontBaseAction {
     	//define columns
     	$columns = array(
     			0=>"id",
-				1=>"group_id",
-    			2=>"user_id",
+				1=>"group_name",
+    			2=>"name",
 				3=>"status",
 				4=>"create_date",
 							

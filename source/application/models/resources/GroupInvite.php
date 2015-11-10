@@ -23,8 +23,10 @@ class GroupInvite extends Zend_Db_Table_Abstract
         if( isset( $data['count_only'] ) == true && $data['count_only'] == 1 ) {
         	$select = $select->from( $this->_name, array( "cnt" => new Zend_Db_Expr("COUNT(1)") ) );
         } else {
-        	$select = $select->from( $this->_name )->columns( array( 'create_date' => new Zend_Db_Expr( "DATE_FORMAT(create_date,'%Y-%m-%d %H:%i:%s')") ) );
+        	$select = $select->from( $this->_name )->columns( array( 'group_invite.create_date' => new Zend_Db_Expr( "DATE_FORMAT(group_invite.create_date,'%Y-%m-%d %H:%i:%s')") ) );
         }
+		$select = $select->joinLeft( 'users', 'users.user_id = group_invite.user_invite', 'user_name as name' );
+		$select = $select->joinLeft( 'group_users', 'group_users.group_id = group_invite.group_invite', 'group_name as group_name' );
         // if( empty( $data["create_date"] ) == false ) {
         // 	$data["create_date"] = date('Y-m-d',strtotime($data['create_date']));
         // 	$select = $select->where( "create_date >= ?", $data["create_date"].' 00:00:00' );

@@ -1,15 +1,16 @@
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-md-12 form-group">
-			<strong>ORDER DETAIL</strong>
-		</div>
-	</div>
-	<div class="row">
 	    <div class="col-md-12">
-	      <form class="form-horizontal"  role="form" method="POST" name="orderDetailForm">
+			<form class="form-inline x-form"  role="form" method="POST" name="memberDetailForm">
+	      	<div class="widget blue">
+	      		<div class="widget-title">
+				    <h4><i class="fa fa-navicon"></i> ORDER DETAIL</h4>
+				</div>
+	      		<div class="widget-body search-form">
+	      			<div class="container-left">
 	      <?php echo $this->partial( "/partials/_errors.phtml", array( "errors" => $this->error ) ); ?>
 	        <fieldset>
-	    	<div class="form-group col-md-12">
+	    	<div class="form-group col-md-12 padding-left padding-right">
 	    		<div class="col-md-3">
 	    			<label><?php echo $this->translate('id')?></label>
 	    			<input disabled="disabled" type="text" placeholder="<?php echo $this->translate('id')?>" class="form-control" name="id" value="<?php echo @$this->info['order_id']?>">
@@ -27,7 +28,7 @@
 	    			<input type="text" disabled="disabled" placeholder="<?php echo $this->translate('amount')?>" class="form-control" name="amount" value="<?php echo @$this->info['amount']?>">
 	    		</div>
 	        </div>
-	        <div class="form-group col-md-12">
+	        <div class="form-group col-md-12 padding-left padding-right">
 	    		<div class="col-md-3">
 	    			<label><?php echo $this->translate('currency')?></label>
 	    			<input type="text" disabled="disabled" data-type="price" placeholder="<?php echo $this->translate('currency')?>" class="form-control" name="currency" value="<?php echo @$this->info['currency']?>">
@@ -45,7 +46,7 @@
 	    			<input type="text" disabled="disabled" data-type="price" placeholder="<?php echo $this->translate('payment-type-value')?>" class="form-control" name="paymentTypeValue" value="<?php echo @$this->info['payment_type_value']?>">
 	    		</div>
 	        </div>
-	        <div class="form-group col-md-12">
+	        <div class="form-group col-md-12 padding-left padding-right">
 	    		<div class="col-md-3">
 	    			<label><?php echo $this->translate('payment-paypal-id')?></label>
 	    			<input type="text" disabled="disabled" placeholder="<?php echo $this->translate('payment-paypal-id')?>" class="form-control" name="paymentTypeId" value="<?php echo @$this->info['payment_paypal_id']?>">
@@ -63,7 +64,7 @@
 	    			<input type="text" disabled="disabled" placeholder="<?php echo $this->translate('created-at')?>" class="form-control" name="createAt" value="<?php echo @$this->info['created_at']?>">
 	    		</div>
 	        </div>
-	        <div class="form-group col-md-12">
+	        <div class="form-group col-md-12 padding-left padding-right">
 	    		<div class="col-md-12">
 	    			<label><?php echo $this->translate('email')?></label>
 	    			<input type="text" disabled="disabled" placeholder="<?php echo $this->translate('email')?>" class="form-control" name="email" value="<?php echo @$this->info['email']?>">
@@ -75,6 +76,9 @@
 	              </div>
 	        </div>
 	        </fieldset>
+			</div>
+			</div>
+			</div>
 	      </form>
 	    </div><!-- /.col-lg-12 -->
 	</div><!-- /.row -->
