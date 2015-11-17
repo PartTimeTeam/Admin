@@ -1,63 +1,42 @@
 <div class="container-fluid">
 	<div class="row">
 	    <div class="col-md-12">
-			<form class="form-inline x-form"  role="form" method="POST" name="memberDetailForm">
-	      	<div class="widget blue">
+			<form class="form-inline x-form" enctype="multipart/form-data" role="form" method="POST" name="memberDetailForm">
+	      	<div>
+				<h3>User</h3>
+				<hr/>
+			</div>
+			<div class="widget blue">
 	      		<div class="widget-title">
-				    <h4><i class="fa fa-navicon"></i> USER DETAIL</h4>
+				    <h4><i class="fa fa-navicon"></i> DETAIL</h4>
 				</div>
 	      		<div class="widget-body search-form">
 	      			<div class="container-left">
 	      <?php echo $this->partial( "/partials/_errors.phtml", array( "errors" => $this->error ) ); ?>
 	        <fieldset>
 	    	<div class="form-group col-md-12">
-	    		<div class="col-md-3 padding-left">
-	    			<label><?php echo $this->translate('user-name')?></label>
+	    		<div class="col-md-2 padding-left">
+	    			<label>User Name</label>
 	    			<input disabled="disabled" type="text" placeholder="<?php echo $this->translate('user-name')?>" class="form-control" name="id" value="<?php echo @$this->info['user_name']?>">
 	    		</div>
-	    		<div class="col-md-3">
-	    			<label><?php echo $this->translate('email')?></label>
+	    		<div class="col-md-2">
+	    			<label>Email</label>
 	    			<input disabled="disabled" type="text" placeholder="<?php echo $this->translate('email')?>" class="form-control" name="email" value="<?php echo @$this->info['email']?>">
 	    		</div>
-	    		<div class="col-md-3">
-	    			<label><?php echo $this->translate('api-token')?></label>
-	    			<input type="text" disabled="disabled" placeholder="<?php echo $this->translate('api-token')?>" class="form-control" name="productGroupName" value="<?php echo @$this->info['api_token']?>">
-	    		</div>
-	    		<div class="col-md-3 padding-right">
+	    		<div class="col-md-2">
 	    			<label><?php echo $this->translate('status')?></label>
 	    			<input type="text" disabled="disabled" placeholder="<?php echo $this->translate('status')?>" class="form-control" name="amount" value="<?php echo @$this->info['status']?>">
 	    		</div>
-	        </div>
-	        <div class="form-group col-md-12">
-	    		<div class="col-md-3 padding-left">
+	    		<div class="col-md-2">
 	    			<label><?php echo $this->translate('gender')?></label>
 	    			<input type="text" disabled="disabled" data-type="" placeholder="<?php echo $this->translate('gender')?>" class="form-control" name="gender" value="<?php echo @$this->info['gender']?>">
 	    		</div>
-	    		<div class="col-md-3">
-	    			<label><?php echo $this->translate('birthday')?></label>
+	    		<div class="col-md-2">
+	    			<label>Birthday</label>
 	    			<input type="text" disabled="disabled" data-type="price" placeholder="<?php echo $this->translate('birthday')?>" class="form-control" name="birthday" value="<?php echo @$this->info['birthday']?>">
 	    		</div>
-	    		<div class="col-md-3">
-	    			<label><?php echo $this->translate('android-key')?></label>
-	    			<input type="text" disabled="disabled" data-type="" placeholder="<?php echo $this->translate('android-key')?>" class="form-control" name="android_key" value="<?php echo @$this->info['android_key']?>">
-	    		</div>
-	    		<div class="col-md-3 padding-right">
-	    			<label><?php echo $this->translate('ios-key')?></label>
-	    			<input type="text" disabled="disabled" data-type="" placeholder="<?php echo $this->translate('ios-key')?>" class="form-control" name="paymentTypeValue" value="<?php echo @$this->info['ios_key']?>">
-	    		</div>
-	        </div>
-	        <div class="form-group col-md-12">
-	    		<div class="col-md-3 padding-left">
-	    			<label><?php echo $this->translate('device-id')?></label>
-	    			<input type="text" disabled="disabled" placeholder="<?php echo $this->translate('device-id')?>" class="form-control" name="paymentTypeId" value="<?php echo @$this->info['device_id']?>">
-	    		</div>
-	    		
-	    		<div class="col-md-3">
-	    			<label><?php echo $this->translate('forgot-pass')?></label>
-	    			<input type="text" disabled="disabled" placeholder="<?php echo $this->translate('forgot-pass')?>" class="form-control" name="createAt" value="<?php echo @$this->info['forgot_pass']?>">
-	    		</div>
-				<div class="col-md-3">
-	    			<label><?php echo $this->translate('created-at')?></label>
+				<div class="col-md-2 padding-right">
+	    			<label>Created At</label>
 	    			<input type="text" disabled="disabled" placeholder="<?php echo $this->translate('created-at')?>" class="form-control" name="createAt" value="<?php echo @$this->info['created_at']?>">
 	    		</div>
 	        </div>

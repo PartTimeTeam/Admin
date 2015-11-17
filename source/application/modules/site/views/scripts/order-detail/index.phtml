@@ -2,7 +2,7 @@
     <div class="row" style="padding-bottom: 20px">
         <div class="col-md-12">
             <div>
-                <h3><?php echo $this->translate( "order" ); ?></h3>
+                <h3>Order List</h3>
             </div>
             <hr/>
             <form class="form-inline search-form search-form-datatable" role="form" method="get" 
@@ -10,17 +10,17 @@
             		<div class="container-left ">
             			<div class="col-md-12 padding-left padding-right">
             				<div class="form-group col-md-3">
-                				<label for=""><?php echo $this->translate( 'order-name' ); ?></label>
+                				<label for="">Order Name</label>
                 				<input id="orderName" type="text" class="form-control searchItem" placeholder="<?php echo $this->translate( 'order-name' ); ?>"
                            			mapping-column="1" item-type="search" data-type="" data-format=""/>
                 			</div>
                 			<div class="form-group col-md-3">
-                				<label for=""><?php echo $this->translate( 'email' ); ?></label>
+                				<label for="">Email</label>
                 				<input id="email" type="text" class="form-control searchItem" placeholder="<?php echo $this->translate( 'email' ); ?>"
                            			mapping-column="9" item-type="search" data-type="" data-format=""/>
                 			</div>
                 			<div class="form-group col-md-3">
-                				<label for=""><?php echo $this->translate( 'currency' ); ?></label>
+                				<label for="">Currency</label>
                 				<select id="currency" class="form-control no-search searchItem" 
 			                            mapping-column="3" item-type="search" data-format="">
 			                        	<option value=""><?php echo $this->translate( "all" ); ?></option>
@@ -31,7 +31,7 @@
 			                    </select>
                 			</div>
                 			<div class="form-group col-md-3">
-                				<label for=""><?php echo $this->translate( 'create-date' ); ?></label>
+                				<label for="">Created Date</label>
                 				<input id="createDate" type="text" class="form-control searchItem datepicker"
                            			mapping-column="8" item-type="search" data-type="" data-format="dd-mm-yyyy" format='yyyy-mm-dd'/>
                 			</div>
@@ -39,7 +39,7 @@
             			<div class="form-group col-md-12">
 				            <p class="btn-search ">
 				                <button type="button" class="btn btn-primary" id="btnSearch" onclick="PaymentAdmin.site.pages.Common.executeSearchForm('searchOrderForm', 'orderTable');">
-				                    <i class="fa fa-search"></i> <?php echo $this->translate( 'search' ); ?>
+				                    <i class="fa fa-search"></i> SEARCH
 				                </button>
 				            </p>
 				        </div>

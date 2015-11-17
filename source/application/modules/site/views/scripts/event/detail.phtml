@@ -1,0 +1,80 @@
+<div class="container-fluid">
+	<div class="row">
+	    <div class="col-md-12">
+			<form class="form-inline x-form" enctype="multipart/form-data" role="form" method="POST" name="memberDetailForm">
+	      	<div>
+				<h3>Event</h3>
+				<hr/>
+			</div>
+			<div class="widget blue">
+	      		<div class="widget-title">
+				    <h4><i class="fa fa-navicon"></i> DETAIL</h4>
+				</div>
+	      		<div class="widget-body search-form">
+	      			<div class="container-left">
+	      <?php echo $this->partial( "/partials/_errors.phtml", array( "errors" => $this->error ) ); ?>
+	        <fieldset>
+	    	<div class="form-group col-md-12">
+	    		<div class="col-md-3 padding-left">
+	    			<label>Event Name</label>
+	    			<input type="text" placeholder="Event Name" class="form-control" name="event_name" value="<?php echo @$this->info['event_name']?>">
+	    		</div>
+	    		<div class="col-md-3">
+	    			<label>Date</label>
+	    			<input type="text" placeholder="Date" class="form-control datepicker" name="date" value="<?php echo @$this->info['date']?>">
+	    		</div>
+	    		<div class="col-md-3">
+	    			<label>Number of Teams</label>
+	    			<input type="text" placeholder="Number of Teams" class="form-control" name="team_number" value="<?php echo @$this->info['team_number']?>">
+	    		</div>
+	    		<div class="col-md-3 padding-right">
+	    			<label>Members of Team</label>
+	    			<input type="text" placeholder="Members of Team" class="form-control" name="team_member" value="<?php echo @$this->info['team_member']?>">
+	    		</div>
+	        </div>
+	        <div class="form-group col-md-12">
+	    		<div class="col-md-3 padding-left">
+	    			<label>Price</label>
+	    			<input type="text" placeholder="Price" class="form-control" name="price" value="<?php echo @$this->info['price']?>">
+	    		</div>
+	    		<div class="col-md-3">
+	    			<label>Round</label>
+	    			<input type="text" placeholder="Round" class="form-control" name="round" value="<?php echo @$this->info['round']?>">
+	    		</div>
+				<?php if ( empty( $this->info['logo_url'] ) == false ){?>
+	    		<div class="col-md-3 padding-left">
+	    			<label>Logo URL</label>
+	    				<img src="<?php echo PUBLIC_PATH.'/upload/'.$this->info['logo_url'] ?>" style="width:208px;height:100px;">
+	    		</div>
+	    		<div class="col-md-3">
+	    		<label>&nbsp;</label>
+	    			<input type="file" name="logo_url" class="form-control" >
+					<input type="hidden" name="file_name" value="<?php echo @$this->info['logo_url'] ?>" />
+	    		</div>
+    			<?php } else { ?>
+    			<div class="col-md-3">
+	    		<label>Logo URL</label>
+	    			<input type="file" name="logo_url" class="form-control" >
+	    		</div>
+	    		<?php } ?>
+	        </div>
+			<div class="form-group col-md-12">
+	    		<div class="col-md-6 padding-left">
+	    			<label>Description</label>
+					<textarea rows="3" class="form-control" name="description"><?php echo @$this->info['description']?></textarea>
+	    		</div>
+	        </div>
+	          <div class="form-group col-md-12">
+	              <div class="pull-right">
+	                <button type="button" class="btn btn-default" onclick="window.location = '<?php echo '/'.$this->controller?>';">CANCEL</button>
+	                <button type="submit" class="btn btn-primary">SUBMIT</button>
+	              </div>
+	          </div>
+	        </fieldset>
+			</div>
+			</div>
+			</div>
+	      </form>
+	    </div><!-- /.col-lg-12 -->
+	</div><!-- /.row -->
+</div>

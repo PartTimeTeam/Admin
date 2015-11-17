@@ -1,10 +1,14 @@
 <div class="container-fluid">
 	<div class="row">
 	    <div class="col-md-12">
-			<form class="form-inline x-form"  role="form" method="POST" name="memberDetailForm">
-	      	<div class="widget blue">
+			<form class="form-inline x-form" enctype="multipart/form-data" role="form" method="POST" name="memberDetailForm">
+	      	<div>
+				<h3>Product Group</h3>
+				<hr/>
+			</div>
+			<div class="widget blue">
 	      		<div class="widget-title">
-				    <h4><i class="fa fa-navicon"></i> DETAIL GROUP JOIN</h4>
+				    <h4><i class="fa fa-navicon"></i> DETAIL</h4>
 				</div>
 	      		<div class="widget-body search-form">
 	      			<div class="container-left">
@@ -108,11 +112,12 @@
     			<?php if ( empty( $this->info['logo_url'] ) == false ){?>
 	    		<div class="col-md-3">
 	    			<label>Logo URL</label>
-	    				<img src="../data/upload/hinh-anh-ca-choi-1.jpg" style="width:208px;height:100px;">
+	    				<img src="<?php echo PUBLIC_PATH.'/upload/'.$this->info['logo_url'] ?>" style="width:208px;height:100px;">
 	    		</div>
 	    		<div class="col-md-3">
 	    		<label>&nbsp;</label>
 	    			<input type="file" name="logo_url" class="form-control" >
+					<input type="hidden" name="file_name" value="<?php echo @$this->info['logo_url'] ?>" />
 	    		</div>
     			<?php } else { ?>
     			<div class="col-md-3">

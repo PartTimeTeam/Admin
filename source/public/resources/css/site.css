@@ -1207,7 +1207,13 @@ button.multiselect {
 }
 .loginButton{
 	color:white;
-	background-color:#DD0000 !important;;
+	font-weight: bold;
+	background-color:rgb(31, 48, 138) !important;;
+}
+.loginButton:hover{
+	color:white;
+	font-weight: bold;
+	background-color:rgba(31, 48, 138, 0.88) !important;;
 }
 .signupButton{
 	color:white;
@@ -1217,7 +1223,7 @@ button.multiselect {
 .tow-row{
 	font-size: 22px;
 }
-/**/
+/*
 .x-form{
 	    padding-top: 15px;
-}
+}*/

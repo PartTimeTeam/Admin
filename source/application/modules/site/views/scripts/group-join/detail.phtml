@@ -1,10 +1,14 @@
 <div class="container-fluid">
 	<div class="row">
 	    <div class="col-md-12">
-			<form class="form-inline x-form"  role="form" method="POST" name="memberDetailForm">
-	      	<div class="widget blue">
+			<form class="form-inline x-form" enctype="multipart/form-data" role="form" method="POST" name="memberDetailForm">
+	      	<div>
+				<h3>Group Join</h3>
+				<hr/>
+			</div>
+			<div class="widget blue">
 	      		<div class="widget-title">
-				    <h4><i class="fa fa-navicon"></i> DETAIL GROUP JOIN</h4>
+				    <h4><i class="fa fa-navicon"></i> DETAIL</h4>
 				</div>
 	      		<div class="widget-body search-form">
 	      			<div class="container-left">
@@ -12,19 +16,19 @@
 					<fieldset>
 					<div class="form-group col-md-12 padding-right padding-left">
 						<div class="col-md-3 padding-left">
-							<label><?php echo $this->translate('group-id')?></label>
+							<label>Group Id</label>
 							<input disabled="disabled" type="text" placeholder="<?php echo $this->translate('group-id')?>" class="form-control" name="id" value="<?php echo @$this->info['group_id']?>">
 						</div>
 						<div class="col-md-3">
-							<label><?php echo $this->translate('user-id')?></label>
+							<label>User Id</label>
 							<input disabled="disabled" type="text" placeholder="<?php echo $this->translate('user-id')?>" class="form-control" name="email" value="<?php echo @$this->info['user_id']?>">
 						</div>
 						<div class="col-md-3">
-							<label><?php echo $this->translate('status')?></label>
+							<label>Status</label>
 							<input type="text" disabled="disabled" placeholder="<?php echo $this->translate('status')?>" class="form-control" name="amount" value="<?php echo @$this->info['status']?>">
 						</div>
 						<div class="col-md-3 padding-right">
-							<label><?php echo $this->translate('create-date')?></label>
+							<label>Created Date</label>
 							<input type="text" disabled="disabled" placeholder="<?php echo $this->translate('create-date')?>" class="form-control" name="productGroupName" value="<?php echo @$this->info['create_date']?>">
 						</div>
 					</div>

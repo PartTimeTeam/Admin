@@ -1,0 +1,36 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div>
+                <h3>Event List</h3>
+            </div>
+            <hr/>
+        </div>
+    </div>
+    <div class="row">
+    	<div class="col-md-12 text-left position">
+			<button type="button" class="btn btn-success" onclick="window.location='/<?php echo $this->controller;?>/detail';"><i class="fa fa-crosshairs"></i> CREATE EVENT</button>
+	    </div>
+	    <div class="col-md-12">
+	    	<table id="eventTable" class="data-table display" cellspacing="0" width="">
+	    		<thead>
+	    			<tr>
+	    				<th>ID</th>
+	    				<th>Event Name</th>
+						<th>Logo</th>
+	    				<th>Description</th>
+	    				<th>Date</th>
+	    				<th>Team Number</th>
+	    				<th>Team Member</th>
+	    				<th>Price</th>
+	    				<th>Round</th>
+	    				<th width="35px">Action</th>
+	    			</tr>
+	    		</thead>
+	    	</table>
+	    </div>
+    </div>
+</div>
+<div class="modal fade" id="dialog-event" tabindex="-1" role="dialog" aria-hidden="true">
+
+</div>

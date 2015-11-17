@@ -1,10 +1,14 @@
 <div class="container-fluid">
 	<div class="row">
 	    <div class="col-md-12">
-			<form class="form-inline x-form"  role="form" method="POST" name="memberDetailForm">
-	      	<div class="widget blue">
+			<form class="form-inline x-form" enctype="multipart/form-data" role="form" method="POST" name="memberDetailForm">
+	      	<div>
+				<h3>Group User</h3>
+				<hr/>
+			</div>
+			<div class="widget blue">
 	      		<div class="widget-title">
-				    <h4><i class="fa fa-navicon"></i> DETAIL GROUP USER</h4>
+				    <h4><i class="fa fa-navicon"></i> DETAIL</h4>
 				</div>
 	      		<div class="widget-body search-form">
 	      			<div class="container-left">
@@ -12,43 +16,43 @@
 	        <fieldset>
 	    	<div class="form-group col-md-12">
 	    		<div class="col-md-3 padding-left">
-	    			<label><?php echo $this->translate('group-name')?></label>
+	    			<label>Group Name</label>
 	    			<input disabled="disabled" type="text" placeholder="<?php echo $this->translate('group-name')?>" class="form-control" name="id" value="<?php echo @$this->info['group_name']?>">
 	    		</div>
 	    		<div class="col-md-3">
-	    			<label><?php echo $this->translate('user-create')?></label>
+	    			<label>User Created</label>
 	    			<input disabled="disabled" type="text" placeholder="<?php echo $this->translate('user-create')?>" class="form-control" name="email" value="<?php echo @$this->info['user_create']?>">
 	    		</div>
 	    		<div class="col-md-3">
-	    			<label><?php echo $this->translate('user-leader')?></label>
+	    			<label>User Leader</label>
 	    			<input type="text" disabled="disabled" placeholder="<?php echo $this->translate('user-leader')?>" class="form-control" name="productGroupName" value="<?php echo @$this->info['user_name_leader']?>">
 	    		</div>
 	    		<div class="col-md-3 padding-right">
-	    			<label><?php echo $this->translate('status')?></label>
+	    			<label>Status</label>
 	    			<input type="text" disabled="disabled" placeholder="<?php echo $this->translate('status')?>" class="form-control" name="amount" value="<?php echo @$this->info['status']?>">
 	    		</div>
 	        </div>
 	        <div class="form-group col-md-12">
 				<div class="col-md-3 padding-left">
-	    			<label><?php echo $this->translate('created-at')?></label>
+	    			<label>Created At</label>
 	    			<input type="text" disabled="disabled" placeholder="<?php echo $this->translate('created-at')?>" class="form-control" name="createAt" value="<?php echo @$this->info['created_at']?>">
 	    		</div>
 	    		<div class="col-md-3">
-	    			<label><?php echo $this->translate('group-slogan')?></label>
+	    			<label>Group Slogan</label>
 	    			<input type="text" disabled="disabled" data-type="" placeholder="<?php echo $this->translate('group-slogan')?>" class="form-control" name="gender" value="<?php echo @$this->info['group-slogan']?>">
 	    		</div>
 	    		<div class="col-md-3">
-	    			<label><?php echo $this->translate('email-leader')?></label>
+	    			<label>Email Leader</label>
 	    			<input type="text" disabled="disabled" data-type="price" placeholder="<?php echo $this->translate('email-leader')?>" class="form-control" name="birthday" value="<?php echo @$this->info['email_leader']?>">
 	    		</div>
 	    		<div class="col-md-3 padding-right">
-	    			<label><?php echo $this->translate('phone')?></label>
+	    			<label>Phone</label>
 	    			<input type="text" disabled="disabled" data-type="" placeholder="<?php echo $this->translate('phone')?>" class="form-control" name="phone" value="<?php echo @$this->info['phone']?>">
 	    		</div>
 	        </div>
 	        <div class="form-group col-md-12">
 	    		<div class="col-md-3 padding-left">
-	    			<label><?php echo $this->translate('logo-url')?></label>
+	    			<label>Logo Url</label>
 	    			<input type="text" disabled="disabled" data-type="" placeholder="<?php echo $this->translate('logo-url')?>" class="form-control" name="paymentTypeValue" value="<?php echo @$this->info['logo_url']?>">
 	    		</div>
 	        </div>
