@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<form name="productGroupForm">
+		<checkrules>
+			<name> 
+		        <validate>
+		            <NotEmpty message="missing-name" />
+		        </validate>
+		    </name>
+		    <description> 
+		        <validate>
+		            <NotEmpty message="missing-description" />
+		        </validate>
+		    </description>
+			<content> 
+		        <validate>
+		            <NotEmpty message="missing-content" />
+		        </validate>
+		    </content>
+		</checkrules>
+	</form>
+</root>

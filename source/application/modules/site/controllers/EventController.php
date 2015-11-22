@@ -48,7 +48,7 @@ class Site_EventController extends FrontBaseAction {
     	}
     	// check request is POST or GET
     	if( $this->request->isPost() ) {
-		
+		print_r($this->post_data);exit;
     		//$xml = APPLICATION_PATH.'/xml/product_group.xml';
     		//$error = BaseService::checkInputData( $xml, $this->post_data);
 			

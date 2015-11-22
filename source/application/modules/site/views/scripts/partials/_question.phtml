@@ -1,0 +1,5 @@
+<?php if( empty($this->list) == false ) {?>
+	<?php foreach ( $this->list as $key => $value ) {?>
+		<option value="<?php echo $value['id']?>" <?php echo ( $value['id'] == @$this->value )? 'selected' : ''?>><?php echo $value['name'];?></option>
+	<?php } ?>
+<?php } ?>

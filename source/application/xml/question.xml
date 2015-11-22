@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<form name="productGroupForm">
+		<checkrules>
+			<type> 
+		        <validate>
+		            <NotEmpty message="missing-type" />
+		        </validate>
+		    </type>
+		    <id_stage> 
+		        <validate>
+		            <NotEmpty message="missing-stage" />
+		        </validate>
+		    </id_stage>
+		    <max_time> 
+		        <validate>
+		            <NotEmpty message="missing-max-time" />
+		        </validate>
+		    </max_time>
+		    <answer> 
+		        <validate>
+		            <NotEmpty message="missing-answer" />
+		        </validate>
+		    </answer>
+			<content> 
+		        <validate>
+		            <NotEmpty message="missing-content" />
+		        </validate>
+		    </content>
+		</checkrules>
+	</form>
+</root>

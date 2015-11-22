@@ -1,8 +1,8 @@
 <?php
-class Site_QuestionController extends FrontBaseAction {
+class Site_HintController extends FrontBaseAction {
     public function init() {
         parent::init();
-        $this->loadJs( array( 'pages-question' ) );
+        $this->loadJs( array( 'pages-hint' ) );
     }
 
     public function indexAction() {
@@ -15,7 +15,7 @@ class Site_QuestionController extends FrontBaseAction {
     	$this->isAjax();// controller nhan ajax request tu client
     	//get parameter
     	$draw = $this->post_data['draw']; // bien draw de tinh tong so trang
-    	$mdlQuestion = new Question();
+    	$mdlHint = new Hint();
     	//define columns
     	$columns = 
     		array( // danh sach cac cot de ordering
@@ -43,11 +43,11 @@ class Site_QuestionController extends FrontBaseAction {
 //     	}
     	//get total data
     	$this->post_data['count_only'] = 1;
-    	$count = $mdlQuestion->fetchAllQuestion( $this->post_data );
+    	$count = $mdlHint->fetchAllHint( $this->post_data );
     	//get filtered data
     	unset( $this->post_data['count_only'] );
     
-    	$list = $mdlQuestion->fetchAllQuestion( $this->post_data );
+    	$list = $mdlHint->fetchAllHint( $this->post_data );
     	if ( empty( $list ) == false ){
     		foreach ( $list as $value ){
     			$value['content'] = strip_tags( $value['content'] );
@@ -66,14 +66,14 @@ class Site_QuestionController extends FrontBaseAction {
      * Create/ Update
      */
     public function detailAction(){
-    	$mdlQuestion = new Question();
+    	$mdlHint = new Hint();
     	$info = array();
     	$error = array();
     	$id = 0;
     	// get post card information if there is postcard'id available
     	if( empty( $this->post_data ['id'] ) == false ) {
     		$id = $this->post_data ['id'];
-    		$info = $mdlQuestion->fetchQuestionById( $id );
+    		$info = $mdlHint->fetchHintById( $id );
     		if( empty( $info ) == true ) {
     			$this->_redirect( '/'.$this->controller );
     		}
@@ -83,10 +83,10 @@ class Site_QuestionController extends FrontBaseAction {
 //     		if ( empty( $this->post_data['content'] ) == false ){
 //     			$this->post_data['content'] = htmlentities( $this->post_data['content'] );
 //     		}
-    		$xml = APPLICATION_PATH.'/xml/question.xml';
+    		$xml = APPLICATION_PATH.'/xml/hint.xml';
     		$error = BaseService::checkInputData( $xml, $this->post_data);
     		if( empty( $error ) == true ) {
-    			$result = $mdlQuestion->saveQuestion( $this->post_data );
+    			$result = $mdlHint->saveHint( $this->post_data );
     			if ( $result > 0 ){
 	    			$this->_redirect( '/'.$this->controller );
     			}
@@ -95,8 +95,8 @@ class Site_QuestionController extends FrontBaseAction {
     			$error = $error;
     		}
     	}
-    	$mdlStage = new Stage();
-    	$this->view->stageList = $mdlStage->fetchAllStage();
+    	$mdlQuestion = new Question();
+    	$this->view->questionList = $mdlQuestion->fetchAllQuestion();
     	$this->view->info = $info;
     	$this->view->id = $id;
     	$this->view->error = $error;
@@ -111,8 +111,8 @@ class Site_QuestionController extends FrontBaseAction {
     	$id = intval( $this->post_data["id"] );
     	//check parameter
     	if ( $id > 0 ) {
-    		$mdl = new Question();
-    		$mdl->deleteQuestion( $id );
+    		$mdl = new Hint();
+    		$mdl->deleteHint( $id );
     		$this->ajaxResponse( CODE_SUCCESS );
     	} else {
     		$this->ajaxResponse( CODE_HAS_ERROR );
