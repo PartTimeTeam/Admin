@@ -86,13 +86,12 @@ class Site_HintController extends FrontBaseAction {
     		$xml = APPLICATION_PATH.'/xml/hint.xml';
     		$error = BaseService::checkInputData( $xml, $this->post_data);
     		if( empty( $error ) == true ) {
-    			$result = $mdlHint->saveHint( $this->post_data );
-    			if ( $result > 0 ){
-	    			$this->_redirect( '/'.$this->controller );
+    			if ( empty( $result ) == true ){
+    				$info = $this->post_data;
+    				$error = $error;
+    			} else{
+    				$this->_redirect( '/'.$this->controller );
     			}
-    		}else {
-    			$info = $this->post_data;
-    			$error = $error;
     		}
     	}
     	$mdlQuestion = new Question();

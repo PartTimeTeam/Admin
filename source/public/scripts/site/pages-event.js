@@ -8,7 +8,6 @@ head.ready(function () {
 	        	$("#dialog-event").empty();
 	        var options = {
 	            success: function (data) {
-	            	console.log(data);
 	                if (data.Code > 0) {
 	                    $("#dialog-event").html(data.Data);
 	                    $("#dialog-event").modal("show");
@@ -18,7 +17,7 @@ head.ready(function () {
 	        };
 	        var url = "/event/view-logo/";
 	        var data = {
-	            id: $('.logo').attr('data')
+	            id: $(this).attr('data')
 	        };
 	        XRace.Ajax.get(url, data, options);
 	        });

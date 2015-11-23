@@ -100,6 +100,7 @@ class My_Controller_Plugin_ViewSetup extends Zend_Controller_Plugin_Abstract {
         $view->headScript()->appendFile( '/libs/bootstrap.min.js', 'text/javascript' );
         $view->headScript()->appendFile( '/libs/pnotify.custom.min.js', 'text/javascript' );
 		$view->headScript()->appendFile( '/libs/ckeditor/ckeditor.js', 'text/javascript' );
+		$view->headScript()->appendFile( '/libs/select2/select2.js', 'text/javascript' );
 //         if ( DEFAULT_MENU == HORIZONTAL ) {
 //             $view->headScript()->appendFile( '/libs/menu_custom.js', 'text/javascript' );
 //         }

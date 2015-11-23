@@ -1,0 +1,30 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div>
+                <h3><?php echo $this->translate( "Game List" ); ?></h3>
+            </div>
+            <hr/>
+        </div>
+    </div>
+    <div class="row">
+    	<div class="col-md-12 text-left position">
+			<button type="button" class="btn btn-success" onclick="window.location='/<?php echo $this->controller;?>/detail';"><i class="fa fa-crosshairs"></i> <?php echo $this->translate('create-game')?></button>
+	    </div>
+	    <div class="col-md-12">
+	    	<table id="gameTable" class="data-table display no-ordering" cellspacing="0" width="100%">
+	    		<thead>
+	    			<tr>
+	    				<th width="15px"><?php echo $this->translate('id')?></th>
+	    				<th><?php echo $this->translate('name');?></th>
+	    				<th width="30px"><?php echo $this->translate('time_start');?></th>
+	    				<th width="30px"><?php echo $this->translate('end_time');?></th>
+	    				<th width="30px"><?php echo $this->translate('list_stage');?></th>
+	    				<th width="60px"><?php echo $this->translate('description');?></th>
+	    				<th width="35px" ></th>
+	    			</tr>
+	    		</thead>
+	    	</table>
+	    </div>
+    </div>
+</div>

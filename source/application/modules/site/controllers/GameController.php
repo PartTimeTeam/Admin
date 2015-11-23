@@ -1,8 +1,8 @@
 <?php
-class Site_QuestionController extends FrontBaseAction {
+class Site_GameController extends FrontBaseAction {
     public function init() {
         parent::init();
-        $this->loadJs( array( 'pages-question' ) );
+        $this->loadJs( array( 'pages-game' ) );
     }
 
     public function indexAction() {
@@ -15,7 +15,7 @@ class Site_QuestionController extends FrontBaseAction {
     	$this->isAjax();// controller nhan ajax request tu client
     	//get parameter
     	$draw = $this->post_data['draw']; // bien draw de tinh tong so trang
-    	$mdlQuestion = new Question();
+    	$mdlGame = new Game();
     	//define columns
     	$columns = 
     		array( // danh sach cac cot de ordering
@@ -43,16 +43,11 @@ class Site_QuestionController extends FrontBaseAction {
 //     	}
     	//get total data
     	$this->post_data['count_only'] = 1;
-    	$count = $mdlQuestion->fetchAllQuestion( $this->post_data );
+    	$count = $mdlGame->fetchAllGame( $this->post_data );
     	//get filtered data
     	unset( $this->post_data['count_only'] );
     
-    	$list = $mdlQuestion->fetchAllQuestion( $this->post_data );
-    	if ( empty( $list ) == false ){
-    		foreach ( $list as $value ){
-    			$value['content'] = strip_tags( $value['content'] );
-    		}
-    	} 
+    	$list = $mdlGame->fetchAllGame( $this->post_data );
     	//return data
     	$return = array();
     	$return['draw'] = $draw;
@@ -66,27 +61,28 @@ class Site_QuestionController extends FrontBaseAction {
      * Create/ Update
      */
     public function detailAction(){
-    	$mdlQuestion = new Question();
+    	$mdlGame = new Game();
     	$info = array();
     	$error = array();
     	$id = 0;
     	// get post card information if there is postcard'id available
     	if( empty( $this->post_data ['id'] ) == false ) {
     		$id = $this->post_data ['id'];
-    		$info = $mdlQuestion->fetchQuestionById( $id );
+    		$info = $mdlGame->fetchGameById( $id );
     		if( empty( $info ) == true ) {
     			$this->_redirect( '/'.$this->controller );
     		}
     	}
     	// check request is POST or GET
     	if( $this->request->isPost() ) {
-//     		if ( empty( $this->post_data['content'] ) == false ){
-//     			$this->post_data['content'] = htmlentities( $this->post_data['content'] );
-//     		}
-    		$xml = APPLICATION_PATH.'/xml/question.xml';
+    		if ( empty( $this->post_data['list_stage'] )== false ) {
+    			$this->post_data['list_stage'] = implode(',',  $this->post_data['list_stage']);
+    		}
+    		$xml = APPLICATION_PATH.'/xml/game.xml';
     		$error = BaseService::checkInputData( $xml, $this->post_data);
+    			
     		if( empty( $error ) == true ) {
-    			$result = $mdlQuestion->saveQuestion( $this->post_data );
+    			$result = $mdlGame->saveGame( $this->post_data );
     			if ( empty( $result ) == true ){
     				$info = $this->post_data;
     				$error = $error;
@@ -111,8 +107,8 @@ class Site_QuestionController extends FrontBaseAction {
     	$id = intval( $this->post_data["id"] );
     	//check parameter
     	if ( $id > 0 ) {
-    		$mdl = new Question();
-    		$mdl->deleteQuestion( $id );
+    		$mdl = new Game();
+    		$mdl->deleteGame( $id );
     		$this->ajaxResponse( CODE_SUCCESS );
     	} else {
     		$this->ajaxResponse( CODE_HAS_ERROR );

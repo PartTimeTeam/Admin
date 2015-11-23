@@ -48,7 +48,6 @@ class Site_EventController extends FrontBaseAction {
     	}
     	// check request is POST or GET
     	if( $this->request->isPost() ) {
-		print_r($this->post_data);exit;
     		//$xml = APPLICATION_PATH.'/xml/product_group.xml';
     		//$error = BaseService::checkInputData( $xml, $this->post_data);
 			
@@ -133,12 +132,12 @@ class Site_EventController extends FrontBaseAction {
         if( empty( $this->post_data['id'] ) == false ){
             $mdlEvent = new Event();
             $infoEvent = $mdlEvent->fetchEventById( $this->post_data['id']);
-            if ( empty( $infoEvent['logo_url'] ) == false ){
+            if ( empty( $this->post_data['id'] ) == false ){
                 $this->view->logo = $infoEvent['logo_url'];
                $this->loadTemplate( "/event/_dialog-event.phtml");
                 //$this->ajaxResponse( CODE_SUCCESS );
             }
         }
-       // $this->ajaxResponse( CODE_HAS_ERROR );
+       $this->ajaxResponse( CODE_HAS_ERROR );
     }
 }
