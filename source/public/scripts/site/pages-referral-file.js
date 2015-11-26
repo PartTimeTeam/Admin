@@ -18,7 +18,7 @@ head.ready(function () {
 									"render": function ( data, type, row ) {
 										var url ='';
 										if ( row['url_share_file'].length > 0 ){
-											url = 'domain/referral-file/'+row['url_share_file'];
+											url = server_host+row['url_share_file'];
 										}
 										return url;
 									},
