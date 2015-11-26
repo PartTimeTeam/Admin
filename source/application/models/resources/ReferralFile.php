@@ -49,7 +49,10 @@ class ReferralFile extends Zend_Db_Table_Abstract
     	if( empty($param) == false ){
 	    	$where[]  = $db->quoteInto( "url_share_file = ?", $param );
 	    	$result = $this->fetchRow( $where );
-	    	$result = $result->toArray();
+	    	if( empty($result) == false ){
+	    		$result = $result->toArray();
+	    		return $result;
+	    	}
     	}
     	return $result;
     }
@@ -62,6 +65,10 @@ class ReferralFile extends Zend_Db_Table_Abstract
     		$where[]  = $db->quoteInto( "code = ?", $code );
     		$result = $this->fetchRow( $where );
     		$result = $result->toArray();
+    		if( empty($result) == false ){
+	    		$result = $result->toArray();
+	    		return $result;
+	    	}
     	}
     	return $result;
     }
