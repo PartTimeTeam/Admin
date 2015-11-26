@@ -71,7 +71,6 @@ class ReferralFile extends Zend_Db_Table_Abstract
     	if( empty($code) == false ){
     		$where[]  = $db->quoteInto( "code = ?", $code );
     		$result = $this->fetchRow( $where );
-    		$result = $result->toArray();
     		if( empty($result) == false ){
 	    		$result = $result->toArray();
 	    		return $result;

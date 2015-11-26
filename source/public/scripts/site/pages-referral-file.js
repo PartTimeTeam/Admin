@@ -18,7 +18,8 @@ head.ready(function () {
 									"render": function ( data, type, row ) {
 										var url ='';
 										if ( row['url_share_file'].length > 0 ){
-											url = server_host+'download/index?&fileshare='+row['url_share_file'];
+											var link = server_host+'download/index?&fileshare='+row['url_share_file'];
+											url = '<a href='+link+'>'+link+'</a>';
 										}
 										return url;
 									},
