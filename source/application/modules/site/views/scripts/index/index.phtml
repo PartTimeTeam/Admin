@@ -1,8 +1,8 @@
 <div id="select-home" class="container wrapperIndex">
 	<div class="col-md-12 text-center title">
-		<h1>XRace Management System</h1>
+		<h1>X Hunt Management System</h1>
 	</div>
-    <div class="form-group col-md-12 padding-left padding-right text-center">
+    <div class="form-group col-md-12 padding-left padding-right text-center <?php echo ( @$this->login_info->is_root == false )? 'hidden':''?>">
 		<a href="/user"> 
 			<div class="col-md-2 widgetIndex widget-shadow">
 				<p><i class="fa fa-user"></i> <span>ACCOUNT</span></p>
@@ -28,8 +28,6 @@
 				<p><i class="fa fa-credit-card"></i> <span>ORDER</span></p>
 			</div>
 		</a>
-	</div>
-	<div class="form-group col-md-12 padding-left padding-right text-center">
 
 		<a href="/group-user"> 
 			<div class="col-md-2 widgetIndex widget-shadow">
@@ -51,34 +49,47 @@
 				<p><i class="fa fa-sun-o"></i> <span>EVENT</span></p>
 			</div>
 		</a>
-		<a href="/question"> 
-			<div class="col-md-2 widgetIndex widget-shadow">
-				<p><i class="fa fa-question-circle"></i> <span>QUESTION</span></p>
-			</div>
-		</a>
-		<a href="/stage"> 
-			<div class="col-md-2 widgetIndex widget-shadow last">
-				<p><i class="fa fa-empire"></i> <span>STAGE</span></p>
-			</div>
-		</a>
-		<a href="/hint"> 
-			<div class="col-md-2 widgetIndex widget-shadow ">
-				<p><i class="fa  fa-sticky-note-o"></i> <span>HINT</span></p>
-			</div>
-		</a>
-		<a href="/game"> 
-			<div class="col-md-2 widgetIndex widget-shadow ">
-				<p><i class="fa  fa-gamepad"></i> <span>GAME</span></p>
-			</div>
-		</a>
-		<a href="/referral"> 
-			<div class="col-md-2 widgetIndex widget-shadow ">
-				<p><i class="fa  fa-codepen"></i> <span>REFERRAL CODE</span></p>
-			</div>
-		</a>
 		<a href="/notification"> 
 			<div class="col-md-2 widgetIndex widget-shadow " style="color: red;">
 				<p><i class="fa  fa-codepen"></i> <span>NOTIFICATION</span></p>
 			</div>
 		</a>
+	</div>
+		<div class="form-group col-md-12 padding-left padding-right text-center">
+			<a href="/game"> 
+				<div class="col-md-2 widgetIndex widget-shadow ">
+					<p><i class="fa  fa-gamepad"></i> <span>GAME</span></p>
+				</div>
+			</a>
+			<a href="/referral"> 
+				<div class="col-md-2 widgetIndex widget-shadow last">
+					<p><i class="fa  fa-codepen"></i> <span>GAME CODE</span></p>
+				</div>
+			</a>
+			<a href="/stage"> 
+				<div class="col-md-2 widgetIndex widget-shadow last">
+					<p><i class="fa fa-empire"></i> <span>STAGE</span></p>
+				</div>
+			</a>
+			<a href="/question"> 
+				<div class="col-md-2 widgetIndex widget-shadow">
+					<p><i class="fa fa-question-circle"></i> <span>CHALLENGE</span></p>
+				</div>
+			</a>
+			<a href="/hint"> 
+				<div class="col-md-2 widgetIndex widget-shadow last">
+					<p><i class="fa  fa-sticky-note-o"></i> <span>HINT</span></p>
+				</div>
+			</a>
+			<a href="/game-log"> 
+				<div class="col-md-2 widgetIndex widget-shadow ">
+					<p><i class="fa  fa-sticky-note-o"></i> <span>GAME LOG</span></p>
+				</div>
+			</a>
+			<a href="/referral-file"> 
+				<div class="col-md-2 widgetIndex widget-shadow ">
+					<p><i class="fa  fa-sticky-note-o"></i> <span>FILE SHARE</span></p>
+				</div>
+			</a>
+		</div>
 </div>
