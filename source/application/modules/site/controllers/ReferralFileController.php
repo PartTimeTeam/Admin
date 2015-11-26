@@ -52,7 +52,7 @@ class Site_ReferralFileController extends FrontBaseAction {
 	    			$this->post_data['fileName'] = 	$this->post_data['file_name_hid'];
 	    		}
 	    	}
-    		if ( empty( $this->post_data['code'] == true ) ){
+    		if ( empty( $this->post_data['code'] ) == true  ){
     			$this->post_data['code'] = $this->generateCode();
     		}
     		// check data
