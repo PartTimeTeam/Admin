@@ -20,7 +20,7 @@ class ReferralFile extends Zend_Db_Table_Abstract
      * @return multitype:
      */
     public function fetchAllReferralFiles( $data = array() ) {
-    	 $db = $this->getAdapter();
+    	$db = $this->getAdapter();
         $db->setProfiler('other');
         
     	$select = $this->getAdapter()->select();
@@ -38,6 +38,30 @@ class ReferralFile extends Zend_Db_Table_Abstract
     	$result = $this->getAdapter()->fetchAll( $select );
     	if( empty( $data['count_only'] ) == false && $data['count_only'] == 1 ) {
     		return $result[0]['cnt'];
+    	}
+    	return $result;
+    }
+    public function checkUrlParam( $param ){
+    	$db = $this->getAdapter();
+    	$db->setProfiler('other');
+    	$select = $this->getAdapter()->select();
+    	$result = array();
+    	if( empty($param) == false ){
+	    	$where[]  = $db->quoteInto( "url_share_file = ?", $param );
+	    	$result = $this->fetchRow( $where );
+	    	$result = $result->toArray();
+    	}
+    	return $result;
+    }
+    public function getFileByCode( $code ){
+    	$db = $this->getAdapter();
+    	$db->setProfiler('other');
+    	$select = $this->getAdapter()->select();
+    	$result = array();
+    	if( empty($code) == false ){
+    		$where[]  = $db->quoteInto( "code = ?", $code );
+    		$result = $this->fetchRow( $where );
+    		$result = $result->toArray();
     	}
     	return $result;
     }

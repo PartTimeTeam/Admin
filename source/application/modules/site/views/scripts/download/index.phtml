@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+		<?php echo $this->headMeta(); ?>
+		<?php echo $this->headTitle(); ?>
+		<?php echo $this->headLink(); ?>
+		
+    </head>
+    <body>
+        <div class="wrapper">
+            <img class="logo" src="/resources/images/logo.png" />
+            <div class="file">
+                <span><?php echo @$this->fileShare?></span>
+            </div>
+            <a class="button"  style="display: none;" href="#">DOWNLOAD NOW!</a>
+            <form class="dform" action="/download/process-download" method="post">
+                <label>Please enter download code:</label>
+                <div>
+                    <input type="text" id="code" name="Code" placeholder="Download Code" />
+                    <input type="submit" id="checkCode" value="UNLOCK" />
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
+ <?php echo $this->headScript(); ?>
