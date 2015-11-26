@@ -12,7 +12,13 @@ class ReferralFile extends Zend_Db_Table_Abstract
     	$this->_setAdapter($dbAdapter);
     }
     public function insertReferralFile( $data ){
-    	return $this->insert( $data );
+    	if ( empty( $data["id"] ) == false && $data['id'] > 0)  {
+    		$where[] = $this->getAdapter()->quoteInto( "id = ?", $data["id"], Zend_Db::INT_TYPE );
+    		return $this->update( $data, $where );
+    	} else {
+    		$id = $this->insert( $data );
+    		return $id;
+    	}
     }
     /**
      * get all list ReferralFile
@@ -29,6 +35,7 @@ class ReferralFile extends Zend_Db_Table_Abstract
     	} else {
     		$select = $select->from( $this->_name );
     	}
+    	$select = $select->where('status <>?', STATUS_DELETE );
     	//check count only purpose
     	if( empty( $data['count_only'] ) == true || $data['count_only'] != 1 ) {
     		$start = ( empty( $data['start'] ) == false ) ? $data['start'] : 0;
@@ -76,6 +83,18 @@ class ReferralFile extends Zend_Db_Table_Abstract
     	$db     = $this->getAdapter();
     	$db->setProfiler('other');
     	$where[] = $db->quoteInto( "id = ?", $id, Zend_Db::INT_TYPE );
+    	$result = $this->fetchRow( $where );
+    	if ( empty( $result ) == true ) {
+    		return array();
+    	}
+    	$result = $result->toArray();
+    	return $result;
+    }
+    public function fetchReferralFileByCode( $code ) {
+    	$db     = $this->getAdapter();
+    	$db->setProfiler('other');
+    	$where[] = $db->quoteInto( "code = ?", $code );
+    	$where[] = $db->quoteInto('status <>?', STATUS_DELETE );
     	$result = $this->fetchRow( $where );
     	if ( empty( $result ) == true ) {
     		return array();

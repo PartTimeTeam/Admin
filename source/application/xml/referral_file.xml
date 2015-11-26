@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<form name="productGroupForm">
+		<checkrules>
+		    <fileName> 
+		        <validate>
+		            <NotEmpty message="missing-file" />
+		        </validate>
+		    </fileName>
+		    <code> 
+		        <validate>
+		            <NotEmpty message="missing-code" />
+		            <CheckExistCode with="id" custom='true' class="UtilValidator" message="code-exist" />
+		        </validate>
+		    </code>
+		    <url_share_file> 
+		        <validate>
+		            <NotEmpty message="missing-url-share-file" />
+		        </validate>
+		    </url_share_file>
+		</checkrules>
+	</form>
+</root>

@@ -153,6 +153,11 @@ class UtilValidator {
 									                @$data[ $rule_item ['with'] ],// object type
 									                @$data[ $key ]// object id
 									        );
+									    }  else if( $className =='CheckExistCode' ){
+									        	$param = array (
+									        			@$data[ $rule_item ['with'] ],//id
+									        			@$data[ $key ]// code
+									        	);
 										} else {
 											$param = array (
 													$data [$key] 
@@ -782,5 +787,16 @@ class UtilValidator {
 	    }
 	
 	    return $isError;
+	}
+	public static function CheckExistCode($id, $code ) {
+		$isError = false;
+		$mdlReferralFile = new ReferralFile();
+		$row = $mdlReferralFile->fetchReferralFileByCode( $code );
+		if ( empty( $row ) == false ) {
+			if ( $id != $row['id'] ){
+				$isError = true; 
+			}
+		}
+		return $isError;
 	}
 }
