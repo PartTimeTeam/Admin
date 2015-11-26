@@ -12,6 +12,7 @@
         <?php echo $this->headTitle(); ?>
         <?php echo $this->headLink(); ?>
         <script>
+        	var server_host = '<?php echo 'http://'.$_SERVER['HTTP_HOST'].'/'; ?>';
         	var Language = 'en';
         	 var autoLogoutConfig = '<?php echo $this->autoLogoutMilisec; ?>';
         	 var showNotify = '<?php echo $this->showNotify ;?>';
