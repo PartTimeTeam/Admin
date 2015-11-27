@@ -34,6 +34,7 @@ class Site_ReferralFileController extends FrontBaseAction {
     	$mdl = new ReferralFile();
     	$info = array();
     	$error = array();
+    	$dataIn = array();
     	$id = 0;
     	// get post card information if there is postcard'id available
     	if( empty( $this->post_data ['id'] ) == false ) {
@@ -47,6 +48,7 @@ class Site_ReferralFileController extends FrontBaseAction {
     	if( $this->request->isPost() ) {
     		// check image if edit
     		$this->post_data['fileName'] = @$_FILES['fileName']['name'];
+    		
 	    	if ( empty( $this->post_data['file_name_hid'] ) == false ){
 	    		if ( empty ( $this->post_data['fileName'] ) == true ){
 	    			$this->post_data['fileName'] = 	$this->post_data['file_name_hid'];
@@ -58,7 +60,18 @@ class Site_ReferralFileController extends FrontBaseAction {
     		// check data
     		$xml = APPLICATION_PATH.'/xml/referral_file.xml';
     		$error = BaseService::checkInputData( $xml, $this->post_data);
-    		
+    		// check file type
+    		if ( empty( $_FILES['fileName'] ) == false ){
+    			$f_type =  $_FILES['fileName']['type'];
+    			if ($f_type== "image/gif" || $f_type== "image/png" || $f_type== "image/jpeg" || $f_type== "image/JPEG" 
+    					|| $f_type== "image/PNG" || $f_type== "image/GIF"){
+	    			$dataIn['file_type'] = TYPE_IS_IMAGE; 
+    			} else {
+    				$dataIn['file_type'] = TYPE_IS_FILE;
+    			}
+    		}else {
+    			$dataIn['file_type'] = $this->post_data['file_type'];
+    		}
 	    	$uploaddir = PUBLIC_PATH.'/upload/';
 	    	$data = $this->post_data;
 	    	if( empty( $data ) == false && empty( $error ) == true ){
@@ -76,13 +89,13 @@ class Site_ReferralFileController extends FrontBaseAction {
 	    				if ( empty( $data['file']['name'] ) == true ){
 	    					$data['file']['name'] = $this->post_data['file_name_hid'];
 	    				}
-    					$dataIn = array();
+    					
     					$dataIn['id'] = $id;
     					$dataIn['physical_name'] = $fileName;
     					$dataIn['file_name'] = $data['file']['name'];
     					$dataIn['status'] = 0;
     					$dataIn['code'] = $data['code'];
-    					$dataIn['url_share_file'] = $data['url_share_file'];
+    					$dataIn['url_share_file'] = substr( hash( 'sha1', $data['code'] ), 0, 10 );
 	    				if ( move_uploaded_file($data['file']['tmp_name'], $uploadfile) ) {
 	    					$result = $mdl->insertReferralFile( $dataIn );
 	    				} else {
@@ -133,7 +146,8 @@ class Site_ReferralFileController extends FrontBaseAction {
         }
     }
     public static function generateCode(){
-    	$string = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+//     	$string = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    	$string = uniqid();
     	return substr(str_shuffle( $string ), 1, 7);
     }
 }

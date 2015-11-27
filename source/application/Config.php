@@ -53,3 +53,5 @@ define('LOG_ACTION_VOID', 'VOID');
 define('CAPTCHA_PATH', BASE_PATH . '/data/captcha/');
 define('DOMAIN_XRACE', 'http://45.32.248.222:9091/');
 define('STATUS_DELETE', 1 );
+define('TYPE_IS_IMAGE', 0);
+define('TYPE_IS_FILE', 1);
