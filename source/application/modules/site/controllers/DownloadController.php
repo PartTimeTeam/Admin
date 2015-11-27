@@ -5,6 +5,7 @@ class Site_DownloadController extends FrontBaseAction {
         parent::init();
         $this->_helper->layout()->disableLayout();
         $this->view->headLink()->appendStylesheet( "/resources/css/download_site.css" );
+        $this->view->headLink()->appendStylesheet( "/resources/css/_dev_download_site.css" );
         $this->view->headScript()->appendFile( '/scripts/client/head.js', 'text/javascript' );
         $this->view->headScript()->appendFile( '/libs/jquery.min.js', 'text/javascript' );
         $this->view->headScript()->appendFile( '/scripts/site/pages-download.js', 'text/javascript' );
@@ -17,19 +18,27 @@ class Site_DownloadController extends FrontBaseAction {
     		if( empty($check) == true ){
     			$this->_redirect('/'.$this->controller.'/page-not-found');
     		}
-    		$this->view->fileShare = $data['fileshare'];
+    		$this->view->fileShare = $check['file_name'];//$data['fileshare'];
     	} else {
     		$this->_redirect('/'.$this->controller.'/page-not-found');
     	}
-    }
-    public function checkCodeInPutAction(){
-    	$this->isAjax();
     	
-    	if( empty($data['Code']) == false ){
-    		
-    	} else {
-    		$this->ajaxResponse(CODE_HAS_ERROR,'Please Iput Code');
+    }
+    public function checkCodeInputAction(){
+    	$this->isAjax();
+    	if( $this->request->isPost() ){
+    		$data = $this->post_data;
+	    	if( empty($data['Code']) == false ){
+	    		//
+	    		$referrlFile = new ReferralFile();
+	    		$codeInfo = $referrlFile->getFileByCode( $data['Code'] );
+	    		if( empty( $codeInfo ) == false ){
+	    			$this->ajaxResponse(CODE_SUCCESS,'');
+	    		}
+	    		//
+	    	} 
     	}
+    	$this->ajaxResponse(CODE_HAS_ERROR);
     }
     public function processDownloadAction(){
     	$data = $this->post_data;
@@ -40,8 +49,14 @@ class Site_DownloadController extends FrontBaseAction {
     			$referrlFile = new ReferralFile();
     			$codeInfo = $referrlFile->getFileByCode( $code );
     			if( empty( $codeInfo) == false ){
-    				$this->view->codeInfo = $codeInfo;
-    				$this->view->host = 'http://'.$_SERVER['HTTP_HOST'].'/upload/';
+    				$host = 'http://'.$_SERVER['HTTP_HOST'].'/upload/';
+    				if( $codeInfo['file_type'] == IS_IMG ){
+    					header("Location:".$host.$codeInfo['physical_name']);
+    				} else {
+    					$this->view->codeInfo = $codeInfo;
+    					$this->view->host = $host;
+    				}
+    				
     			} else {
     				$this->_redirect('/'.$this->controller.'/page-not-found');
     			}

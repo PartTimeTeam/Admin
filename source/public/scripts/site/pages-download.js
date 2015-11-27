@@ -1,16 +1,24 @@
 $("#checkCode").click(function(){
 		var code = $("#code").val();
-		var myRegEx  = /^([a-zA-Z0-9 _-]+)$/;
-		var isValid = !(myRegEx.test(code));
-		if( isValid == true && code !=''){
-				$.ajax({
-					  type: "POST",
-					  url: url,
-					  data: data,
-					  success: success,
-					  dataType: dataType
-				});
+		if( code != "" && code.length > 0 ){
+			$.ajax({
+	    	    type: "POST",
+	            url: '/download/check-code-input',
+	            data: { Code: code },
+	            success: function (data) {
+	            	if(isDefined(data.Code) && data.Code == 1){
+	            		 $("form").submit();//
+	            	} else {
+	            		alert('Code is not available!');
+	            	}
+	                
+	            },
+	            cache: false
+	        });
 		} else {
-			window.location = '/download/page-not-found';
+			alert('Invalid Code');
 		}
 });
+function isDefined(obj) {
+	return typeof obj !== 'undefined' && obj !== null && obj !== undefined;
+}

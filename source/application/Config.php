@@ -1,5 +1,7 @@
 <?php
 //-------------COMMON FOR ALL WEBSITE----------------//
+define('IS_FILE', 1);
+define('IS_IMG', 0);
 define('LANG_DEFAULT', 'en');
 define('SITE_FRONT', 'SITE_FRONT');
 define('AUTO_LOGOUT_MILISEC', 2700000);

@@ -15,12 +15,11 @@
             <div class="file">
                 <span><?php echo @$this->fileShare?></span>
             </div>
-            <a class="button"  style="display: none;" href="#">DOWNLOAD NOW!</a>
             <form class="dform" action="/download/process-download" method="post">
                 <label>Please enter download code:</label>
                 <div>
-                    <input type="text" id="code" name="Code" placeholder="Download Code" />
-                    <input type="submit" id="checkCode" value="UNLOCK" />
+                    <input type="text" id="code" name="Code" required placeholder="Download Code" />
+                    <input type="button" id="checkCode" value="UNLOCK" />
                 </div>
             </form>
         </div>

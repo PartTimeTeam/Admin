@@ -13,9 +13,9 @@
         <div class="wrapper">
             <img class="logo" src="/resources/images/logo.png" />
             <div class="file">
-                <span><?php echo @$this->codeInfo['url_share_file']?></span>
+                <span><?php echo @$this->codeInfo['file_name']?></span>
             </div>
-            <a class="button" download="<?php echo @$this->codeInfo['phuong.txt']?>" href="<?php echo $this->host. @$this->codeInfo['physical_name']?>">DOWNLOAD NOW!</a>
+            <a class="button" download="<?php echo @$this->codeInfo['file_name']?>" href="<?php echo $this->host. @$this->codeInfo['physical_name']?>">DOWNLOAD NOW!</a>
         </div>
     </body>
 </html>
