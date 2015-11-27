@@ -13,11 +13,6 @@
 		            <CheckExistCode with="id" custom='true' class="UtilValidator" message="code-exist" />
 		        </validate>
 		    </code>
-		    <url_share_file> 
-		        <validate>
-		            <NotEmpty message="missing-url-share-file" />
-		        </validate>
-		    </url_share_file>
 		</checkrules>
 	</form>
 </root>
