@@ -107,12 +107,8 @@ class ReferralFile extends Zend_Db_Table_Abstract
 	 * @param int $userTypeId
 	 * @return number
 	 */
-    public function deleteReferralFile( $id )
-    {
-    	$datain = array(
-    			'status'      => STATUS_DELETE
-    	);
+    public function deleteReferralFile( $id ){
     	$where = $this->getAdapter()->quoteInto('id = ?', $id);
-    	return $this->update( $datain, $where );
+    	return $this->delete( $where );
     }
 }

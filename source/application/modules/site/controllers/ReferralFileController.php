@@ -144,9 +144,20 @@ class Site_ReferralFileController extends FrontBaseAction {
         $id = intval( $this->post_data["id"] );
         //check parameter
         if ( $id > 0 ) {
-            $ReferralFile = new ReferralFile();
-            $ReferralFile->deleteReferralFile( $id );
-            $this->ajaxResponse( CODE_SUCCESS );
+        	$ReferralFile = new ReferralFile();
+        	$info = $ReferralFile->fetchReferralFileById($id);
+        	if( empty($info) == false ){
+        		$url = PUBLIC_PATH.'/upload/'.$info['physical_name'];
+        		$rs = $ReferralFile->deleteReferralFile( $id );
+        		if( $rs >= 0 ){
+        			if ( file_exists($url) ) {
+        				unlink($url);
+        			}
+        			$this->ajaxResponse( CODE_SUCCESS );
+        		} else {
+        			$this->ajaxResponse( CODE_HAS_ERROR );
+        		}
+        	}
         } else {
             $this->ajaxResponse( CODE_HAS_ERROR );
         }
