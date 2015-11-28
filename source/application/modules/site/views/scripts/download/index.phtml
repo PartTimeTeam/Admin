@@ -19,6 +19,7 @@
                 <label>Please enter download code:</label>
                 <div>
                     <input type="text" id="code" name="Code" required placeholder="Download Code" />
+                    <input type="hidden" id="urlShare" name="UrlShare" value="<?php echo @$this->urlShare?>">
                     <input type="button" id="checkCode" value="UNLOCK" />
                 </div>
             </form>

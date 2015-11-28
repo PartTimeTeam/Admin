@@ -11,9 +11,9 @@ class ReferralFile extends Zend_Db_Table_Abstract
     	$dbAdapter  = $dbAdapters['other'];
     	$this->_setAdapter($dbAdapter);
     }
-    public function insertReferralFile( $data ){
-    	if ( empty( $data["id"] ) == false && $data['id'] > 0)  {
-    		$where[] = $this->getAdapter()->quoteInto( "id = ?", $data["id"], Zend_Db::INT_TYPE );
+    public function insertUpdateReferralFile( $data, $id = 0 ){
+    	if ( empty( $id ) == false && $id > 0)  {
+    		$where[] = $this->getAdapter()->quoteInto( "id = ?", $id , Zend_Db::INT_TYPE );
     		return $this->update( $data, $where );
     	} else {
     		$id = $this->insert( $data );
@@ -63,13 +63,14 @@ class ReferralFile extends Zend_Db_Table_Abstract
     	}
     	return $result;
     }
-    public function getFileByCode( $code ){
+    public function getFileByCode( $code, $urlShare){
     	$db = $this->getAdapter();
     	$db->setProfiler('other');
     	$select = $this->getAdapter()->select();
     	$result = array();
-    	if( empty($code) == false ){
+    	if( empty($code) == false && empty($urlShare) == false ){
     		$where[]  = $db->quoteInto( "code = ?", $code );
+    		$where[]  = $db->quoteInto( "url_share_file = ?", $urlShare );
     		$result = $this->fetchRow( $where );
     		if( empty($result) == false ){
 	    		$result = $result->toArray();

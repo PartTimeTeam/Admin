@@ -2,11 +2,6 @@
 <root>
 	<form name="productGroupForm">
 		<checkrules>
-		    <fileName> 
-		        <validate>
-		            <NotEmpty message="missing-file" />
-		        </validate>
-		    </fileName>
 		    <code> 
 		        <validate>
 		            <NotEmpty message="missing-code" />

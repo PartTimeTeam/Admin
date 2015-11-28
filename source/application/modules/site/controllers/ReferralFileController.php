@@ -36,7 +36,6 @@ class Site_ReferralFileController extends FrontBaseAction {
     	$error = array();
     	$dataIn = array();
     	$id = 0;
-    	// get post card information if there is postcard'id available
     	if( empty( $this->post_data ['id'] ) == false ) {
     		$id = $this->post_data ['id'];
     		$info = $mdl->fetchReferralFileById( $id );
@@ -46,70 +45,77 @@ class Site_ReferralFileController extends FrontBaseAction {
     	}
     	
     	if( $this->request->isPost() ) {
-    		// check image if edit
-    		$this->post_data['fileName'] = @$_FILES['fileName']['name'];
-    		
-	    	if ( empty( $this->post_data['file_name_hid'] ) == false ){
-	    		if ( empty ( $this->post_data['fileName'] ) == true ){
-	    			$this->post_data['fileName'] = 	$this->post_data['file_name_hid'];
-	    		}
-	    	}
     		if ( empty( $this->post_data['code'] ) == true  ){
     			$this->post_data['code'] = $this->generateCode();
     		}
     		// check data
     		$xml = APPLICATION_PATH.'/xml/referral_file.xml';
     		$error = BaseService::checkInputData( $xml, $this->post_data);
-    		// check file type
-    		if ( empty( $_FILES['fileName'] ) == false ){
-    			$f_type =  $_FILES['fileName']['type'];
-    			if ($f_type== "image/gif" || $f_type== "image/png" || $f_type== "image/jpeg" || $f_type== "image/JPEG" 
-    					|| $f_type== "image/PNG" || $f_type== "image/GIF"){
-	    			$dataIn['file_type'] = TYPE_IS_IMAGE; 
-    			} else {
-    				$dataIn['file_type'] = TYPE_IS_FILE;
+    		if( $id == 0 ){
+    			if( empty($_FILES['fileName']['name']) == true ){
+    				$error['fileName'] = 'Please input file!';
     			}
-    		}else {
-    			$dataIn['file_type'] = $this->post_data['file_type'];
     		}
 	    	$uploaddir = PUBLIC_PATH.'/upload/';
 	    	$data = $this->post_data;
-	    	if( empty( $data ) == false && empty( $error ) == true ){
-	    		$data['file'] = @$_FILES['fileName'];
-	    		if( empty( $data['file'] ) == false && empty($this->post_data['fileName']) == false && empty( $data['code'] ) == false ){
-	    			$fileName = $this->_createFileName( $this->post_data['fileName'] );
-	    			$uploadfile = $uploaddir . basename( $fileName );
-	    			
-	    			if( empty( $fileName ) == false ) {
-	    				if ( $id > 0 && empty( $info['physical_name'] ) == false && $info['file_name'] != $this->post_data['fileName'] ){
-	    					if ( file_exists(PUBLIC_PATH.'/upload/'.$info['physical_name']) ) {
-	    						unlink(PUBLIC_PATH.'/upload/'.$info['physical_name']);
-	    					}
-	    				}
-	    				if ( empty( $data['file']['name'] ) == true ){
-	    					$data['file']['name'] = $this->post_data['file_name_hid'];
-	    				}
-    					
-    					$dataIn['id'] = $id;
-    					$dataIn['physical_name'] = $fileName;
-    					$dataIn['file_name'] = $data['file']['name'];
-    					$dataIn['status'] = 0;
-    					$dataIn['code'] = $data['code'];
-    					$dataIn['url_share_file'] = substr( hash( 'sha1', $data['code'] ), 0, 10 );
-	    				if ( move_uploaded_file($data['file']['tmp_name'], $uploadfile) ) {
-	    					$result = $mdl->insertReferralFile( $dataIn );
-	    				} else {
-	    					$result = $mdl->insertReferralFile( $dataIn );
-	    				}
-	    				
-    					if ( $result >= 0 ){
-    						$this->_redirect( '/'.$this->controller );
-    					} else {
-    						$info = $this->post_data;
-    						$error = $error;
-    					}
+	    	if( empty( $error ) == true ){
+	    		if ( empty( $_FILES['fileName']['name'] ) == false ){
+	    			$f_type =  $_FILES['fileName']['type'];
+	    			if ($f_type== "image/gif" || $f_type== "image/png" || $f_type== "image/jpeg" || $f_type== "image/JPEG"
+	    					|| $f_type== "image/PNG" || $f_type== "image/GIF"){
+	    				$dataIn['file_type'] = TYPE_IS_IMAGE;
+	    			} else {
+	    				$dataIn['file_type'] = TYPE_IS_FILE;
+	    			}
+	    			$dataIn['physical_name'] = $this->_createFileName( $_FILES['fileName']['name'] );
+	    			$dataIn['file_name'] = $_FILES['fileName']['name'];
+	    		}
+	    		$dataIn['code'] = $data['code'];
+	    		$uploadfile = '';
+				// check Move
+				$checkMove = false;
+	    		if( empty($_FILES['fileName']['name']) == false ){
+	    			$uploadfile = $uploaddir . basename( $dataIn['physical_name'] );
+	    			if ( move_uploaded_file($_FILES['fileName']['tmp_name'], $uploadfile) ) {
+	    				$checkMove = true;
+	    			} else {
+	    				$error['upload'] = 'Upload File Fail. Please Try again';
 	    			}
 	    		}
+	    		if( empty($error) == true ){
+		    		if( intval($id) > 0 ){
+		    			$result =$mdl->insertUpdateReferralFile( $dataIn, $id );
+		    			if( $result >= 0 ){
+		    				// unlink if exist file
+		    				if( empty($_FILES['fileName']['name']) == false ){
+		    					// unlink 
+		    					if ( file_exists(PUBLIC_PATH.'/upload/'.$info['physical_name']) ) {
+		    						unlink(PUBLIC_PATH.'/upload/'.$info['physical_name']);
+		    					}
+		    					
+		    				}
+		    				$this->_redirect( '/'.$this->controller );
+		    			} else {
+		    				$error['update'] = 'Update Fail';
+		    			}
+		    			
+		    		} else {
+		    			// insert
+		    			$info = $dataIn;
+		    			$dataIn['status'] = 0;
+		    			$dataIn['url_share_file'] = substr( hash( 'sha1', $data['code'] ), 0, 10 );
+		    			$result = $mdl->insertUpdateReferralFile($dataIn);
+		    			if( $result <= 0 ){
+		    				
+		    				$error['insert'] = 'Insert Fail';
+		    			} else {
+		    				$this->_redirect( '/'.$this->controller );
+		    			}
+		    		}
+	    		
+	    		}
+	    	} else {
+	    		$info = $this->post_data;
 	    	}
     	}
     	$this->view->error = $error;

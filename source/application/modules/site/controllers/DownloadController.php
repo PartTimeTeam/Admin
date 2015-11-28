@@ -19,6 +19,7 @@ class Site_DownloadController extends FrontBaseAction {
     			$this->_redirect('/'.$this->controller.'/page-not-found');
     		}
     		$this->view->fileShare = $check['file_name'];//$data['fileshare'];
+    		$this->view->urlShare = $check['url_share_file'];
     	} else {
     		$this->_redirect('/'.$this->controller.'/page-not-found');
     	}
@@ -31,7 +32,7 @@ class Site_DownloadController extends FrontBaseAction {
 	    	if( empty($data['Code']) == false ){
 	    		//
 	    		$referrlFile = new ReferralFile();
-	    		$codeInfo = $referrlFile->getFileByCode( $data['Code'] );
+	    		$codeInfo = $referrlFile->getFileByCode( $data['Code'], $data['UrlShare'] );
 	    		if( empty( $codeInfo ) == false ){
 	    			$this->ajaxResponse(CODE_SUCCESS,'');
 	    		}
@@ -43,11 +44,12 @@ class Site_DownloadController extends FrontBaseAction {
     public function processDownloadAction(){
     	$data = $this->post_data;
     	$codeInfo = array();
-    	if( empty($data['Code']) == false ){
+    	if( empty($data['Code']) == false && empty($data['UrlShare']) == false ){
     		$code = $data['Code'];
+    		$urlShare = $data['UrlShare'];
     		if( strlen($code) > 0 ){
     			$referrlFile = new ReferralFile();
-    			$codeInfo = $referrlFile->getFileByCode( $code );
+    			$codeInfo = $referrlFile->getFileByCode( $code, $urlShare);
     			if( empty( $codeInfo) == false ){
     				$host = 'http://'.$_SERVER['HTTP_HOST'].'/upload/';
     				if( $codeInfo['file_type'] == IS_IMG ){
